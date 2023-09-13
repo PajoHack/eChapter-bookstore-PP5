@@ -1,0 +1,42 @@
+[
+    {
+        "model": "products.category",
+        "pk": 1,
+        "fields": {
+            "name": "Fiction",
+            "description": "Explore worlds beyond imagination."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 2,
+        "fields": {
+            "name": "Non-Fiction",
+            "description": "Books grounded in facts and reality."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 3,
+        "fields": {
+            "name": "Biography",
+            "description": "Stories of people who made a difference."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 4,
+        "fields": {
+            "name": "Science",
+            "description": "The world of atoms, space, and everything in between."
+        }
+    },
+    {
+        "model": "products.category",
+        "pk": 5,
+        "fields": {
+            "name": "History",
+            "description": "Unveil the past."
+        }
+    }
+]
