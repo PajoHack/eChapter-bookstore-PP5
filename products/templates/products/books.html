@@ -19,18 +19,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="book-container col-10 offset-1">
+            <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for book in books %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if book.cover_image %}
-                                <a href="">
+                                <a href="{% url 'book_detail' book.id %}">
                                     <img class="card-img-top img-fluid" src="{{ book.cover_image.url }}" alt="{{ book.title }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'book_detail' book.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ book.title }}">
                                 </a>
                                 {% endif %}
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- logic for horizontal rules -->
+                        <!-- Add your horizontal rule logic here -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
