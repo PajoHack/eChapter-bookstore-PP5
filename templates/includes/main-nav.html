@@ -16,12 +16,14 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fiction-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fiction
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="fiction-link">
-                <a href="" class="dropdown-item">Fantasy</a>
-                <a href="" class="dropdown-item">Mystery</a>
-                <a href="" class="dropdown-item">Romance</a>
-                <a href="" class="dropdown-item">All Fiction</a>
-            </div>
+            <div class="dropdown-menu border-0" aria-labelledby="book-category-link">
+                <a href="{% url 'products' %}?category=fiction" class="dropdown-item">Fiction</a>
+                <a href="{% url 'products' %}?category=non-fiction" class="dropdown-item">Non-Fiction</a>
+                <a href="{% url 'products' %}?category=science" class="dropdown-item">Science</a>
+                <a href="{% url 'products' %}?category=history" class="dropdown-item">History</a>
+                <a href="{% url 'products' %}?category=biography" class="dropdown-item">Biography</a>
+                <a href="{% url 'products' %}?category=fiction,non-fiction,science,history" class="dropdown-item">All Books</a>
+            </div>            
         </li>
 
         <li class="nav-item dropdown">
@@ -29,9 +31,9 @@
                 Non-Fiction
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="non-fiction-link">
-                <a href="" class="dropdown-item">Biography</a>
-                <a href="" class="dropdown-item">Science</a>
-                <a href="" class="dropdown-item">History</a>
+                <a href="{% url 'products' %}?category=biography" class="dropdown-item">Biography</a>
+                <a href="{% url 'products' %}?category=science" class="dropdown-item">Science</a>
+                <a href="{% url 'products' %}?category=history" class="dropdown-item">History</a>
                 <a href="" class="dropdown-item">All Non-Fiction</a>
             </div>
         </li>
@@ -40,12 +42,12 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="special-collections-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Collections
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="special-collections-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Best Sellers</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Collections</a>
-            </div>
+            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
+            </div>            
         </li>
     </ul>
 </div>
