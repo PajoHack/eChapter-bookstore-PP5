@@ -12,12 +12,14 @@ def bag_contents(request):
 
     for item_id, quantity in bag.items():
         book = get_object_or_404(Book, pk=item_id)
+        subtotal = quantity * book.price
         total += quantity * book.price
         book_count += quantity
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
             'book': book,
+            'subtotal': subtotal
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
