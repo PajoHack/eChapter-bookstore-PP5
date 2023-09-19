@@ -41,11 +41,13 @@ def adjust_bag(request, item_id):
         messages.success(request,
                          (f'Updated {book.title} '
                           f'quantity to {bag[item_id]}'))
+        messages.info(request, f'You now have {bag[item_id]} copies of {book.title} in your bag.')
     else:
         bag.pop(item_id)
         messages.success(request,
                          (f'Removed {book.title} '
                           f'from your bag'))
+        # messages.info(request, f'{book.title} has been successfully removed from your bag.')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
