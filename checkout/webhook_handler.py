@@ -3,14 +3,13 @@ from .models import Order, OrderLineItem
 from products.models import Book
 import json
 import time
+import stripe
 import logging
 
 logger = logging.getLogger(__name__)
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
-    print("Webhook was triggered")
-    
     def __init__(self, request):
         self.request = request
 
