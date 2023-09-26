@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-pajohack-echapterbookst-po3vhk4p57x.ws-eu104.gitpod.io',
+    '8000-pajohack-echapterbookst-po3vhk4p57x.ws-eu105.gitpod.io',
 ]
 
 
