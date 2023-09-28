@@ -77,10 +77,16 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if book.rating %}
+                                            <!-- {% if book.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ book.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
+                                            {% endif %} -->
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_book' book.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_book' book.id %}">Delete</a>
+                                                </small>
                                             {% endif %}
                                         </div>
                                     </div>
