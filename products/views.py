@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Book, Category
+from .forms import BookForm
 
-# Create your views here.
 
 def all_products(request):
     """ A view to show all books, including sorting and search queries """
@@ -68,3 +68,14 @@ def book_detail(request, book_id):
     }
 
     return render(request, 'products/book_detail.html', context)
+
+
+def add_book(request):
+    """ Add a book to the store """
+    form = BookForm()
+    template = 'products/add_book.html'  # Update this if using a different template
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
