@@ -32,8 +32,8 @@
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <!-- <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option> -->
                                 <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A-Z)</option>
                                 <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (Z-A)</option>
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
@@ -56,7 +56,7 @@
                             <div class="card h-100 border-0">
                                 {% if book.cover_image %}
                                 <a href="{% url 'book_detail' book.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ book.cover_image.url }}" alt="{{ book.title }}">
+                                    <img class="card-img-top img-fluid book-cover" src="{{ book.cover_image.url }}" alt="{{ book.title }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'book_detail' book.id %}">
