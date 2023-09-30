@@ -6,7 +6,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-books-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <!-- <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a> -->
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Books</a>
             </div>
@@ -14,15 +14,15 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fiction-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Fiction
+                Genres
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="book-category-link">
-                <a href="{% url 'products' %}?category=fiction" class="dropdown-item">Fiction</a>
-                <a href="{% url 'products' %}?category=non-fiction" class="dropdown-item">Non-Fiction</a>
-                <a href="{% url 'products' %}?category=science" class="dropdown-item">Science</a>
-                <a href="{% url 'products' %}?category=history" class="dropdown-item">History</a>
-                <a href="{% url 'products' %}?category=biography" class="dropdown-item">Biography</a>
-                <a href="{% url 'products' %}?category=fiction,non-fiction,science,history" class="dropdown-item">All Books</a>
+                <a href="{% url 'products' %}?category=Fiction" class="dropdown-item">Fiction</a>
+                <!-- <a href="{% url 'products' %}?category=Non-fiction" class="dropdown-item">Non-Fiction</a> -->
+                <a href="{% url 'products' %}?category=Science" class="dropdown-item">Science</a>
+                <a href="{% url 'products' %}?category=History" class="dropdown-item">History</a>
+                <a href="{% url 'products' %}?category=Biography" class="dropdown-item">Biography</a>
+                <a href="{% url 'products' %}?category=Fiction,Non-fiction,Science,History" class="dropdown-item">All Books</a>
             </div>            
         </li>
 
@@ -31,10 +31,10 @@
                 Non-Fiction
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="non-fiction-link">
-                <a href="{% url 'products' %}?category=biography" class="dropdown-item">Biography</a>
-                <a href="{% url 'products' %}?category=science" class="dropdown-item">Science</a>
-                <a href="{% url 'products' %}?category=history" class="dropdown-item">History</a>
-                <a href="" class="dropdown-item">All Non-Fiction</a>
+                <a href="{% url 'products' %}?category=Biography" class="dropdown-item">Biography</a>
+                <a href="{% url 'products' %}?category=Science" class="dropdown-item">Science</a>
+                <a href="{% url 'products' %}?category=History" class="dropdown-item">History</a>
+                <a href="{% url 'products' %}?category=Non-fiction,Science,History, Biography" class="dropdown-item">All Non-Fiction</a>
             </div>
         </li>
 
