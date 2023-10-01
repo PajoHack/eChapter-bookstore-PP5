@@ -40,7 +40,7 @@
                                 {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.product.image %}
+                                        {% if item.book.cover_image %}
                                         <img class="img-fluid rounded" src="{{ item.book.cover_image.url }}" alt="{{ item.book.title }}">
                                         {% else %}
                                         <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.book.title }}">

@@ -17,7 +17,7 @@
                 <div class="image-container my-5">
                     {% if book.cover_image %}
                         <a href="{{ book.cover_image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ book.cover_image.url }}" alt="{{ book.title }}">
+                            <img class="card-img-top img-fluid book-cover-detail" src="{{ book.cover_image.url }}" alt="{{ book.title }}">
                         </a>
                     {% else %}
                         <a href="">
