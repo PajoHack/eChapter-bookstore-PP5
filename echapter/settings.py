@@ -17,7 +17,6 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -32,6 +31,7 @@ ALLOWED_HOSTS = [
     '8000-pajohack-echapterbookst-po3vhk4p57x.ws-eu105.gitpod.io',
     'echapter-pp5.herokuapp.com',
     'localhost',
+    'echapter-pp5-a9a674e8d251.herokuapp.com',
 ]
 
 
