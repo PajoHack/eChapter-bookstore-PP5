@@ -1,0 +1,1 @@
+web: gunicorn echapter.wsgi:application

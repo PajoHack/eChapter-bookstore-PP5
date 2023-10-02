@@ -5,7 +5,7 @@
         "fields": {
             "title": "To Kill a Mockingbird",
             "author": 1,
-            "ISBN": "978-0-06-112008-4",
+            "ISBN": "978-0-06-1120",
             "publisher": "HarperCollins",
             "price": "10.99",
             "category": 1,
@@ -18,7 +18,7 @@
         "fields": {
             "title": "1984",
             "author": 2,
-            "ISBN": "978-0-452-28423-4",
+            "ISBN": "978-0-452-284",
             "publisher": "Penguin Books",
             "price": "9.99",
             "category": 1,
@@ -31,7 +31,7 @@
         "fields": {
             "title": "The Selfish Gene",
             "author": 3,
-            "ISBN": "978-0-19-286092-7",
+            "ISBN": "978-0-19-2860",
             "publisher": "Oxford University Press",
             "price": "12.99",
             "category": 4,
@@ -44,7 +44,7 @@
         "fields": {
             "title": "Sapiens: A Brief History of Humankind",
             "author": 4,
-            "ISBN": "978-0-099-59008-8",
+            "ISBN": "978-0-099-590",
             "publisher": "Penguin Books",
             "price": "14.99",
             "category": 5,
