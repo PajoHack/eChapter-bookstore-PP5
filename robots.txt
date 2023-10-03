@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Sitemap: https://echapter-pp5-a9a674e8d251.herokuapp.com/sitemap.xml

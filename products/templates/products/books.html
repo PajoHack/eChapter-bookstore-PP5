@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% block extra_title %}
+    {% if current_categories %}
+        {% for c in current_categories %}{{ c.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+    {% else %}
+        All Books - eChapter
+    {% endif %}
+{% endblock %}
 {% load static %}
 
 {% block page_header %}
@@ -32,8 +39,6 @@
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <!-- <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option> -->
                                 <option value="title_asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A-Z)</option>
                                 <option value="title_desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (Z-A)</option>
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
@@ -77,11 +82,7 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            <!-- {% if book.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ book.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %} -->
+                                
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_book' book.id %}">Edit</a> | 
@@ -93,7 +94,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Add your horizontal rule logic here -->
+                        <!-- Horizontal rule -->
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <hr>
