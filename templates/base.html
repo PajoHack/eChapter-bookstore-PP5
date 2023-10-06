@@ -43,7 +43,8 @@
     <title>eChapter: Online Bookstore for Diverse Reads{% block extra_title %}{% endblock %}</title>
 
   </head>
-  <body>
+  <div class="d-flex flex-column min-vh-100">
+    
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -124,6 +125,7 @@
   </div>
   </header>
 
+  <div class="content flex-grow-1 mt-5">
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
@@ -145,8 +147,37 @@
 {% block page_header %}
 {% endblock %}
 
+
 {% block content %}
 {% endblock %}
+</div>
+    <!-- Footer -->
+  <footer class="container-wrapper mt-auto">
+    <div class="container quotes-container content-container">
+      <section class="footer">
+        <div class="row">
+          <div class="col-12 page-header mb-4">
+            <h2 class="text-uppercase">Stay in touch:</h2>
+            <hr class="block-divider block-divider--short">
+          </div>
+       </div>
+       <div class="row">
+         <div class="col-12 col-md-6">
+           <h3>Social</h3>
+           <p>Keep up to date with all our latest offers</p>
+           <a href="https://www.facebook.com/profile.php?id=61552008725698&sk=grid" target="_blank"><i class="fab fa-facebook-square"></i> Follow us on Facebook!</a>
+         </div>
+         <div class="col-12 col-md-6">
+           <h2>Subscribe!</h2>
+           <p>Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
+           <!-- Mailchimp signup form here -->
+         </div>
+       </div>
+     </section>
+   </div>
+ </footer>
+<!-- /.footer -->
+</div>
 
 {% block postloadjs %}
     <script type="text/javascript">
