@@ -22,8 +22,8 @@ body.d-flex.flex-column {
 /* Sticky footer */
 .container-wrapper {
     flex-shrink: 0;
-    background-color: black; /* Black background */
-    color: white; /* White text */
+    background-color: #fff; /* Black background */
+    color: #000; /* White text */
 }
   
 /* Content will take up available space */
@@ -340,6 +340,18 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* Mailchimp */
+/* #mc_embed_signup{
+    background:#fff;
+     clear:left; 
+     font:14px Helvetica,Arial,sans-serif; 
+     width: 600px;
+} */
+
+#mc_embed_signup form {
+    padding: 0;
 }
 
 /* fixed top navbar only on medium and up */
