@@ -31,7 +31,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
 
-            books = books.order_by(sortkey)  # Now updating the 'books' queryset
+            books = books.order_by(sortkey)
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -62,7 +62,7 @@ def all_products(request):
 def book_detail(request, book_id):
     """ A view to show individual book details """
     
-    book = get_object_or_404(Book, pk=book_id)  # Query the Book model
+    book = get_object_or_404(Book, pk=book_id)
 
     context = {
         'book': book,
@@ -89,7 +89,7 @@ def add_book(request):
     else:
         form = BookForm()
         
-    template = 'products/add_book.html'  # Update this if using a different template
+    template = 'products/add_book.html'
     
     context = {
         'form': form,
@@ -105,20 +105,20 @@ def edit_book(request, book_id):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    book = get_object_or_404(Book, pk=book_id)  # Using the Book model
+    book = get_object_or_404(Book, pk=book_id)
     if request.method == 'POST':
-        form = BookForm(request.POST, request.FILES, instance=book)  # Using BookForm
+        form = BookForm(request.POST, request.FILES, instance=book)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated book!')
-            return redirect(reverse('book_detail', args=[book.id]))  # Redirect to book_detail
+            return redirect(reverse('book_detail', args=[book.id]))
         else:
             messages.error(request, 'Failed to update book. Please ensure the form is valid.')
     else:
-        form = BookForm(instance=book)  # Using BookForm
-        messages.info(request, f'You are editing {book.title}')  # Assume the book has a title attribute
+        form = BookForm(instance=book)
+        messages.info(request, f'You are editing {book.title}')
 
-    template = 'products/edit_book.html'  # Point to your edit_book template
+    template = 'products/edit_book.html'
     context = {
         'form': form,
         'book': book,
@@ -134,7 +134,7 @@ def delete_book(request, book_id):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    book = get_object_or_404(Book, pk=book_id)  # Using the Book model
+    book = get_object_or_404(Book, pk=book_id)
     book.delete()
     messages.success(request, 'Book deleted!')
-    return redirect(reverse('products'))  # Redirect to your list of books
+    return redirect(reverse('products'))

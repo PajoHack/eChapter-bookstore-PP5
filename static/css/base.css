@@ -29,6 +29,7 @@ body.d-flex.flex-column {
 /* Content will take up available space */
 .content.flex-grow-1 {
     flex-grow: 1;
+    min-height: calc(100vh - 6rem);
 }
 
 /* To remove the border from the icon */
@@ -426,3 +427,80 @@ input[name='q']::placeholder {
         font-size: 0.8em;
     }
 }
+
+/* AAAAAAAAAAAAAAAAAAAAAAAA */
+
+/* Footer Styles */
+/* .footer-container {
+    background-color: #000; 
+    color: #fff;  
+    height: 6rem;
+}
+
+.mailchimp-content {
+    background-color: #000;  
+    color: #fff;  
+}
+
+.mailchimp-wrapper {
+    background-color: #000;
+    width: 100%; 
+    height: 100%;
+} */
+
+/* Footer Styles */
+.footer-container {
+    background-color: #000; /* Setting background to black */
+    color: #fff;  /* Setting text color to white */
+    height: auto;  /* Change this to auto so it will resize according to content */
+}
+
+.mailchimp-content,
+.social-links {
+    background-color: #000;  
+    color: #fff;
+    margin-top: 4rem;
+}
+
+/* For Vertical Links */
+.vertical-links a.footer-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* Hover Effect */
+.vertical-links a.footer-link:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 767px) {
+    .footer-content h2, .footer-content h3, .footer-content p, .footer-content label {
+        font-size: smaller;
+    }
+    .email-button-container input[type="email"] {
+        width: 100%;
+        padding: 5px;
+        font-size: small;
+    }
+    .button-div input[type="submit"] {
+        font-size: small;
+        padding: 5px 10px;
+    }
+    input[type="email"]#mce-EMAIL {
+        font-size: 14px;
+        padding: 0.4rem;
+        width: 100%;
+    }
+    
+    /* Reduce the size of the Subscribe button */
+    input[type="submit"]#mc-embedded-subscribe {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+
