@@ -16,14 +16,14 @@ body {
 body.d-flex.flex-column {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% of the viewport height */
+    min-height: 100vh;
 }
   
 /* Sticky footer */
 .container-wrapper {
     flex-shrink: 0;
-    background-color: #fff; /* Black background */
-    color: #000; /* White text */
+    background-color: #fff;
+    color: #000;
 }
   
 /* Content will take up available space */
@@ -34,7 +34,6 @@ body.d-flex.flex-column {
 
 /* To remove the border from the icon */
 .navbar-toggler-icon {
-    /* existing styles */
     border: none;
 }
 
@@ -70,18 +69,14 @@ body.d-flex.flex-column {
     width: 1.5rem;
 }
 
-/* .logo-font {
-    text-transform: uppercase;
-} */
-
 .logo-font .logo-icon {
-    color: #000;  /* Change to match your site's color scheme */
+    color: #000;
     margin-right: 5px;
 }
   
   .logo-font .logo-text {
     font-weight: bold;
-    color: #333;  /* Change to match your site's color scheme */
+    color: #333;
 }
   
 .main-logo-link {
@@ -503,4 +498,14 @@ input[name='q']::placeholder {
     }
 }
 
-
+/* Custom hover effect for Submit and Subscribe buttons */
+.btn-hover-effect {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+  
+.btn-hover-effect:hover {
+    background-color: #888;
+    color: #fff;
+    border-color: #888;
+}
+  

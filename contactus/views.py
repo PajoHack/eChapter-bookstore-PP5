@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import Contact
 from .forms import ContactForm
 
@@ -7,9 +8,9 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')  # Redirect to home page or a 'Thank you' page
+            messages.success(request, 'Your message was sent successfully. We will be in touch shortly.')
+            return redirect('home')
     else:
         form = ContactForm()
 
     return render(request, 'contactus/contact_us.html', {'form': form})
-
