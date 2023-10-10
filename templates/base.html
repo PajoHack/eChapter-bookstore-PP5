@@ -207,7 +207,13 @@
     </script>
 
     <!-- Mailchimp js -->
-    <script type="text/javascript" src="{% static 'js/mailchimp.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'js/mailchimp.js' %}"></script> -->
+     <!-- Manually Load Mailchimp -->
+     <script type="text/javascript">
+        $(document).ready(function() {
+            $.getScript("{% static 'js/mailchimp.js' %}");
+        });
+    </script>
 {% endblock %}
 
   </body>

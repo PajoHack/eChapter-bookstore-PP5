@@ -426,28 +426,10 @@ input[name='q']::placeholder {
 /* AAAAAAAAAAAAAAAAAAAAAAAA */
 
 /* Footer Styles */
-/* .footer-container {
+.footer-container {
     background-color: #000; 
     color: #fff;  
-    height: 6rem;
-}
-
-.mailchimp-content {
-    background-color: #000;  
-    color: #fff;  
-}
-
-.mailchimp-wrapper {
-    background-color: #000;
-    width: 100%; 
-    height: 100%;
-} */
-
-/* Footer Styles */
-.footer-container {
-    background-color: #000; /* Setting background to black */
-    color: #fff;  /* Setting text color to white */
-    height: auto;  /* Change this to auto so it will resize according to content */
+    height: auto;  
 }
 
 .mailchimp-content,
@@ -457,7 +439,6 @@ input[name='q']::placeholder {
     margin-top: 4rem;
 }
 
-/* For Vertical Links */
 .vertical-links a.footer-link {
     display: block;
     color: #fff;
@@ -465,13 +446,11 @@ input[name='q']::placeholder {
     margin-bottom: 5px;
 }
 
-/* Hover Effect */
 .vertical-links a.footer-link:hover {
     text-decoration: underline;
     color: #ccc;
 }
 
-/* Small Screen Adjustments */
 @media (max-width: 767px) {
     .footer-content h2, .footer-content h3, .footer-content p, .footer-content label {
         font-size: smaller;
@@ -491,14 +470,12 @@ input[name='q']::placeholder {
         width: 100%;
     }
     
-    /* Reduce the size of the Subscribe button */
     input[type="submit"]#mc-embedded-subscribe {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;
     }
 }
 
-/* Custom hover effect for Submit and Subscribe buttons */
 .btn-hover-effect {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -508,4 +485,3 @@ input[name='q']::placeholder {
     color: #fff;
     border-color: #888;
 }
-  
