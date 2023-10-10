@@ -3,7 +3,7 @@
 {% block content %}
 <style>
   .custom-bg {
-    padding-top: 100px;  /* Add top padding to push content down */
+    padding-top: 20rem;  /* Add top padding to push content down */
     background-color: rgba(255, 255, 255, 0.8); /* Add white overlay */
   }
 </style>
@@ -11,7 +11,7 @@
   <div class="container">
     <h1>Internal Server Error</h1>
     <p>Sorry, something went wrong on our end.</p>
-    <a href="{% url 'home' %}">Go back to home</a>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Go back to home</a>
   </div>
 </div>
 {% endblock %}
