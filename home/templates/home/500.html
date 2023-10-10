@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container mt-5">
-        <h2>Internal Server Error</h2>
-        <p>Something went wrong on our end. Please try again later.</p>
-        <a href="{% url 'home' %}">Return to Home</a>
-    </div>
+<style>
+  .custom-bg {
+    padding-top: 100px;  /* Add top padding to push content down */
+    background-color: rgba(255, 255, 255, 0.8); /* Add white overlay */
+  }
+</style>
+<div class="custom-bg">
+  <div class="container">
+    <h1>Internal Server Error</h1>
+    <p>Sorry, something went wrong on our end.</p>
+    <a href="{% url 'home' %}">Go back to home</a>
+  </div>
+</div>
 {% endblock %}
