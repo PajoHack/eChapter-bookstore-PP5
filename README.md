@@ -136,3 +136,73 @@ The overarching epic of the eChapter project is to revolutionize the way people 
 | 23                | Store Owner  | Delete a book         | I can remove books that are sold out or no longer available |
 
 # Features
+
+### Site Navigation
+
+- Desktop Navigation
+
+![Screenshot of desktop navigation](documentation/site-nav-desktop-screenshot.png)
+
+Top Navigation Bar: On desktop, the top navigation bar provides quick access to essential user features. It includes a search bar for finding books, 'My Account' options for registered users, and the shopping bag with the total purchase amount.
+
+Main Navigation: Below the top navigation bar, a second navigation bar provides links to different categories of books (e.g., Fiction, Non-Fiction, Best Sellers, etc.) and other essential pages like 'Contact'.
+
+- Mobile Navigation
+
+![Screenshot of mobile navigation](documentation/site-nav-mobile-screenshot.png)
+
+Hamburger Menu: On mobile devices, the top and main navigation bars are replaced by a hamburger menu located at the top-left corner of the screen. Tapping on this opens a side navigation drawer.
+
+Search: The search functionality is accessible via an icon, which expands into a search bar upon tapping.
+
+User and Bag Icons: The 'My Account' and 'Shopping Bag' features are represented by their respective icons at the top-right corner, next to the search icon.
+
+### Footer
+
+FOOTER GOES HERE
+
+### Home Page
+
+Background Image: The homepage features an inviting background image that sets the tone for the user's experience. The image showcases a cozy reading environment, resonating with the book lovers who visit our site. It serves not just as eye-candy but also as an emotional touchpoint, inspiring users to explore the world of books that "eChapter" offers.
+
+"Shop Now" Callout Button: Prominently displayed against the background image is a "Shop Now" callout button. This button serves as an immediate call-to-action, guiding new visitors directly to our curated selection of books. It's designed to be eye-catching and is strategically placed to capture attention and encourage user engagement.
+
+![Screenshot of the home page](documentation/screenshot-of-the-home-page.png)
+
+### Products Page
+
+- Book Listings: The Products Page serves as the heart of our online bookstore, displaying an extensive list of books available for purchase. Each book is presented with its cover image, title, and price, offering users an at-a-glance view of our inventory.
+
+- Sort By Dropdown: To enhance user experience, a 'Sort By' dropdown menu is provided at the top of the page. This feature allows users to sort the book listings based on different criteria such as 'Best Priced', or by 'Category'. It's a helpful tool for users to find books that best suit their interests or budget.
+
+- Total Number of Books: Located at the top left corner of the page, the total number of books available is displayed. This feature gives users an idea of the breadth of our collection, and serves as a quick reference for the scale of options available to them.
+
+![Screenshot of the products page](documentation/screenshot-of-products-page.png)
+
+### Book Details Page
+
+- Cover Image & Book Title: At the top of the Book Detail Page, users are greeted with a large cover image alongside the book's title. This visual representation gives users a closer look at what they're interested in purchasing, enhancing their shopping experience.
+
+- Quantity Selection: For user convenience, the page provides buttons to increase or decrease the quantity of the selected book. This allows users to easily adjust the number of copies they wish to purchase, directly from the Book Detail Page.
+
+- Add to Bag: A prominent 'Add to Bag' button is featured below the quantity selection, allowing users to quickly add the selected book to their shopping bag. This button is designed for quick and easy navigation, saving users the hassle of going back and forth between pages.
+
+- Keep Shopping: If users want to continue browsing, a 'Keep Shopping' button is also available next to the 'Add to Bag' button. This takes users back to the Products Page, facilitating a seamless shopping experience.
+
+![Screenshot of the book details page](documentation/screenshot-of-book-details-page.png)
+
+### Shopping Bag Page
+
+- Itemized List: As users navigate to the Shopping Bag Page, they're presented with an itemized list of all books they've added to their bag. This provides a quick overview and allows for easy review before proceeding to checkout.
+
+- Cover Images: Next to each book title is its cover image, giving users a visual reminder of what's in their bag and enhancing the overall shopping experience.
+
+- Bag Total & Grand Total: The page prominently displays both the 'Bag Total' and the 'Grand Total,' helping users understand the cost breakdown and keep track of their spending.
+
+- Free Delivery Indicator: A helpful note indicates how much more needs to be spent to qualify for free delivery, encouraging users to meet that threshold and save on shipping.
+
+- Keep Shopping: A 'Keep Shopping' button is conveniently placed for those who wish to continue browsing and add more books to their bag. Clicking this takes users back to the Products Page.
+
+- Secure Checkout: For users ready to finalize their purchase, a 'Secure Checkout' button is featured at the bottom of the page. This leads to a secure checkout process where payment information can be safely entered.
+
+![Screenshot of the shopping bag page](documentation/screenshot-of-shopping-bag-page.png)
