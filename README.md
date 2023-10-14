@@ -159,7 +159,17 @@ User and Bag Icons: The 'My Account' and 'Shopping Bag' features are represented
 
 ### Footer
 
-FOOTER GOES HERE
+The footer of eChapter serves as a multi-functional area that provides additional information and functionalities for both casual browsers and registered users.
+
+- Social Links: On the left side of the footer, you'll find social media links that encourage users to stay connected with eChapter on platforms like Facebook. A brief message entices users to keep up to date with the latest offerings.
+- Newsletter Signup: On the right side, there's a "Subscribe" section where users can sign up for the eChapter newsletter. This feature uses Mailchimp integration and comes with an email input and a 'Subscribe' button.
+- Privacy Policy: A link to the privacy policy is also included, ensuring transparency about how user data is handled.
+- Design: The footer is designed with a dark background to separate it from the main content visually, making it distinct and easy to locate.
+- Responsiveness: The layout of the footer is fully responsive, ensuring a consistent look and feel on both desktop and mobile devices.
+
+This footer provides a final touch to the website, adding both functionality and informational resources for users.
+
+![Screenshot of the footer](documentation/screenshot-of-the-footer.png)
 
 ### Home Page
 
@@ -206,3 +216,146 @@ Background Image: The homepage features an inviting background image that sets t
 - Secure Checkout: For users ready to finalize their purchase, a 'Secure Checkout' button is featured at the bottom of the page. This leads to a secure checkout process where payment information can be safely entered.
 
 ![Screenshot of the shopping bag page](documentation/screenshot-of-shopping-bag-page.png)
+
+### Checkout Page
+
+- Order Summary: At the top, the page provides a succinct order summary, showing all the items you are about to purchase.
+- Cover Images: Each book in your order is represented with its cover image, so you can visually confirm the items in your bag.
+- Bag and Grand Total: The total cost of the items in your bag and the grand total (including any additional charges) are clearly displayed.
+- Free Delivery Indicator: If you haven't reached the amount for free delivery, the page will show you how much more you need to spend.
+- Payment Information: A secure form is provided for you to enter your payment details. You can be confident in the security measures we've implemented to protect your information.
+- Keep Shopping and Secure Checkout Buttons: Two action buttons are provided at the bottom of the page:
+Keep Shopping: Takes you back to the Products Page if you wish to add more items.
+Secure Checkout: Finalizes your order and processes the payment.
+
+![Screenshot of the ckeckout page](documentation/screenshot-of-the-checkout-page.png)
+
+### Profile Page
+
+- Personal Information: At the top, you'll find a section displaying your personal information such as name and email address, allowing you to quickly confirm or change details.
+- Order History: Below the personal information, the page features an "Order History" section. This section lists all your past purchases, providing details like order number, date, and total amount.
+- Order Confirmation: Clicking on an order will expand it to reveal more details, including the list of books purchased, their quantities, and individual prices.
+- Navigation: The Profile Page is easily accessible from the main navigation bar, ensuring that you can quickly jump to other sections of the site.
+
+![Screenshot of the profile page](documentation/screenshot-of-profile-page.png)
+
+### Product Management Page
+
+The Product Management Page is the control center for adding new books to the eChapter store. This page is accessible only to authenticated users with the appropriate permissions.
+
+- Add Book Form: The core feature of this page is the "Add Book" form, which offers fields for all the necessary book details, including title, ISBN, publisher, price, and cover image.
+- Validation: As you fill out the form, validation checks ensure that all entered information adheres to the required formats, helping maintain the integrity of the store's database.
+- Preview: Before submitting, users have the opportunity to preview how the book will appear in the store, providing a final check to ensure accuracy.
+- Submission: A straightforward "Submit" button allows for quick and easy addition of new books to the store's inventory.
+- Navigation: A breadcrumb trail at the top and bottom of the page enables easy navigation back to the main dashboard or other parts of the admin area.
+- Feedback: Upon successful submission, a confirmation message is displayed, and the new book immediately becomes available in the store.
+
+This page is designed to make the process of adding new books as seamless and error-free as possible, empowering users to grow the eChapter catalog effortlessly.
+
+![Screenshot of the product management page](documentation/screenshot-of-product-management-page.png)
+
+# Future Features
+
+- User Reviews and Ratings: Allow registered users to leave reviews and ratings for books they have purchased, which could then be displayed on each book's detail page.
+- Gift Cards and Coupons: Implement a system where users can purchase and redeem gift cards or coupons, providing more flexible payment options.
+- Digital Downloads: Offer books in digital formats such as ePub or PDF, in addition to physical copies.
+- Social Media Integration: Allow users to share their purchases or favorite books on social media platforms directly from the site.
+
+# Deployment
+
+### Deploying to Heroku
+
+- Initial Setup: Create a requirements.txt file in the root directory to specify the Python dependencies that need to be installed for the project to run.
+- Procfile: Create a Procfile in the root directory to tell Heroku how to run the application.
+- Heroku Account: Create an account on Heroku and install the Heroku CLI.
+- Create Heroku App: Run heroku create <app_name> to create a new Heroku app.
+- Git Remote: Heroku automatically adds its remote settings for deployment. Confirm this by running git remote -v.
+- Environment Variables: Set up environment variables in Heroku under the "Settings" tab in the "Config Vars" section.
+- Deploy: Push the project to Heroku by running git push heroku master.
+- Post-deployment Steps: Run any necessary commands for your project, such as migrating the database.
+
+### AWS
+
+Using AWS for Static and Media Files
+AWS S3 (Simple Storage Service) was used to serve static and media files for this project.
+
+- AWS Account: Create an AWS account if you haven't already.
+- S3 Bucket: Create a new S3 bucket.
+- Bucket Policy: Set up a bucket policy to make the bucket's contents publicly accessible.
+- CORS Configuration: Add a CORS configuration to enable cross-origin resource sharing.
+- Django Settings: Update settings.py with AWS configurations, using django-storages and boto3 to connect to S3.
+- Collect Static: Run python manage.py collectstatic to push static files to the S3 bucket.
+- Media Files: Upload any initial media files to the S3 bucket.
+
+### Cloning and Forking the GitHub Repository
+
+To Clone:
+
+- Navigate to the main page of the GitHub repository.
+- Click the "Code" button and copy the URL.
+- Open your terminal and navigate to the directory where you want to clone the repository.
+- Run git clone <URL>.
+
+To Fork:
+
+- Navigate to the main page of the GitHub repository.
+- Click the "Fork" button at the top-right corner. This creates a copy of the project in your GitHub account.
+- You can now clone this forked repository using the steps above, make changes, and create pull requests to contribute to the original project.
+
+# Technologies Used
+
+### Programming Languages
+
+- Python: The backend of the project is written in Python, using the Django framework.
+- JavaScript: Used to add interactivity to the website.
+- HTML: The structure of the website.
+- CSS: Styling of the website, in conjunction with Bootstrap 4.
+
+### Frameworks & Libraries
+
+- Django: Python web framework used for building the application.
+- Bootstrap 4: Front-end framework used for designing responsive and mobile-first web pages.
+- jQuery: JavaScript library used for DOM manipulation and handling user events.
+
+### APIs
+
+- Stripe API: For handling payments.
+
+### Databases
+
+- SQLite: Used in development for storing relational data.
+- ElephantSQL: Used in production, hosted on Heroku.
+
+### Version Control
+
+- Git: For version control.
+- GitHub: As a Git repository hosting service.
+
+### Hosting/Servers
+
+- Heroku: Cloud platform for hosting the web application.
+
+### Storage
+
+- AWS S3: Used for storing static and media files in production.
+
+### Planning and Documentation Tools
+
+- Balsamiq: Used for creating wireframes during the planning phase.
+- Lucidchart: Utilized for designing the database schema and understanding the relationships between different tables.
+- Privacy Policy Generator: Used to generate a privacy policy for the website.
+
+### Other Tools
+
+- Font Awesome: For icons used across the website.
+- Mailchimp: For email subscriptions and marketing.
+
+# Credits
+
+### Boilerplate Code
+
+Boutique Ado Project: The base code for this project was inspired by the Boutique Ado project. This includes the Stripe payment integration and the Toasts functionality for notifications.
+
+# Acknowledgements
+
+I would like to express gratitude to my mentor, Brian Macharia, for his support and invaluable guidance throughout the course of this project. His expertise and insights have been instrumental in helping me navigate through the challenges I encountered, and his constructive feedback has been greatly appreciated. 
