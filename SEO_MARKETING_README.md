@@ -10,19 +10,21 @@ eChapter operates on a Business-to-Customer (B2C) model, focusing on direct tran
 
 ## Keywords
 
-### Primary Keywords
+### Short-tailed Keywords
 
-- Online bookstore
-- Buy books online
-- Fiction and non-fiction books
-- Affordable books online
+- Books
+- Reading
+- Novels
+- Fiction
+- Non-fiction
 
-### Secondary Keywords
+### Long-tailed Keywords
 
-- Best-sellers
-- Rare finds
-- Book genres
-- Book ratings
+- Buy affordable books online
+- Best online bookstore for fiction
+- Where to buy non-fiction books online
+- Latest best-selling novels online
+- High-quality books for sale online
 
 ## User Needs
 

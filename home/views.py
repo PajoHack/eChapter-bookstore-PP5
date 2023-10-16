@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.exceptions import PermissionDenied
 
 # Create your views here.
 
@@ -17,3 +18,7 @@ def custom_500(request):
 
 def custom_403(request, exception):
     return render(request, 'home/403.html', {}, status=403)
+
+
+def trigger_403_error(request):
+    raise PermissionDenied

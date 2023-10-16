@@ -69,7 +69,7 @@ The color scheme is a crucial part of the overall design and user experience of 
 
 ![Screenshot of the wireframe profile page](documentation/wireframe-screenshot-of-profile-page.png)
 
-### Databse Model
+### Database Model
 
 ![Screenshot of database model](documentation/database-model-screenshot.png)
 
@@ -253,6 +253,32 @@ The Product Management Page is the control center for adding new books to the eC
 This page is designed to make the process of adding new books as seamless and error-free as possible, empowering users to grow the eChapter catalog effortlessly.
 
 ![Screenshot of the product management page](documentation/screenshot-of-product-management-page.png)
+
+### Confirmation of Purchase Email
+
+After successfully making a purchase on eChapter, users receive a confirmation email. This not only verifies the email address provided but also serves as a receipt for their purchase. The email is well-formatted and contains all the essential details, enhancing the overall user experience.
+
+![Screenshot of the product management page](documentation/screenshot-of-confirmation-email.png)
+
+### Toast Notifications
+
+eChapter utilizes Bootstrap's Toast notifications for a better user experience. These Toasts appear at the top of the screen to confirm actions taken by the user, such as successfully adding a book to the shopping bag or completing a purchase. The Toasts are designed to be attention-grabbing yet non-intrusive, allowing users to continue browsing without any hurdles.
+
+![Screenshot of the product management page](documentation/screenshot-of-successful-purchase-toast.png)
+
+### Custom Error Pages
+
+- 500 Error Page
+
+During development, we've taken steps to handle errors as gracefully as possible. However, in the rare case that a 500 Internal Server Error occurs, a dedicated error page will be displayed to the user. We are continuously working to minimize these occurrences and improve the stability of the platform.
+
+![Screenshot of the custom 500 error page](documentation/500-error-screenshot.png)
+
+- 404 Error Page 
+
+In the event that a user tries to access a page that doesn't exist on our platform, we've designed a custom 404 Not Found page to guide them back to the main site. This enhances the user experience by providing a cohesive look and feel even in error scenarios.
+
+![Screenshot of the custom 404 error page](documentation/404-error-page-screenshot.png)
 
 # Future Features
 
