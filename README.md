@@ -280,12 +280,32 @@ In the event that a user tries to access a page that doesn't exist on our platfo
 
 ![Screenshot of the custom 404 error page](documentation/404-error-page-screenshot.png)
 
+- 403 Error Page
+
+The custom 403 (Forbidden) page is designed to inform users when they've tried to access a resource for which they do not have permission, offering a seamless experience by maintaining the site's overall look and feel. A 'Go back to home' button is provided for easy navigation back to the homepage.
+
+![Screenshot of the custom 403 error page](documentation/403-error-page-screenshot.png)
+
+### Contact Us Form
+
+The 'Contact Us' section serves as a crucial touchpoint between the website and its users. Designed for ease of use and accessibility, this feature allows customers to quickly get in touch with the support team for any queries or issues they may have. The form fields include the essentials, name, email, and the message itself, to streamline the communication process. Once the form is submitted, users receive an immediate confirmation to assure them that their query has been received and will be addressed promptly. This section aims to bolster customer trust and ensure a smooth user experience by providing a direct line of communication to the site administrators
+
+![Screenshot of the contact us form](documentation/screenshot-of-contact-us-form.png)
+
 # Future Features
 
 - User Reviews and Ratings: Allow registered users to leave reviews and ratings for books they have purchased, which could then be displayed on each book's detail page.
 - Gift Cards and Coupons: Implement a system where users can purchase and redeem gift cards or coupons, providing more flexible payment options.
 - Digital Downloads: Offer books in digital formats such as ePub or PDF, in addition to physical copies.
 - Social Media Integration: Allow users to share their purchases or favorite books on social media platforms directly from the site.
+
+# Seo & Marketing
+
+[SEO and Marketing README link](SEO_MARKETING_README.md)
+
+# Testing
+
+[Testing README link](TESTING_README.md)
 
 # Deployment
 
