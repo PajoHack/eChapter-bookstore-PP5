@@ -485,3 +485,9 @@ input[name='q']::placeholder {
     color: #fff;
     border-color: #888;
 }
+
+/* Update the color scheme for better contrast */
+input#mc-embedded-subscribe.button {
+    background-color: #fff;  /* or another high contrast color */
+    color: #000;  /* or another high contrast color */
+}
