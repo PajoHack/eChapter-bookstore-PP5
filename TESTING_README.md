@@ -18,10 +18,9 @@ The site was tested on multiple browsers including:
 - Microsoft Edge
 - Safari
 
-### Accessibility Testing
+### Lighthouse Testing
 
-- Used WAVE to check accessibility features.
-- Tested keyboard-only navigation.
+![Screenshot of lighthouse testing score](documentation/lighthouse-score-screenshot.png)
 
 ### Performance Testing
 

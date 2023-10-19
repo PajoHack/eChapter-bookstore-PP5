@@ -37,7 +37,17 @@ eChapter operates on a Business-to-Customer (B2C) model, focusing on direct tran
 
 ### Social Media Marketing
 
-- Platforms: Facebook, Instagram, Twitter
+The primary focus of eChapter's market strategy is to build a community of avid readers and book enthusiasts who are continually engaged and converted into loyal customers. Our Facebook page serves as a vital tool in achieving this objective. Through targeted social media campaigns, we aim to attract a diverse audience. We'll post regular content that resonates with our target market, such as book reviews, author interviews, and limited-time offers.
+
+Leveraging Facebook's analytics tools, we'll continually monitor key performance indicators like engagement rate, click-through rate, and conversion rate. This data will help us refine our marketing strategies and make data-driven decisions to maximize ROI. In the long term, we plan to expand our social media presence to other platforms such as Instagram and Twitter to reach a broader audience. However, Facebook will remain the cornerstone of our online community-building efforts.
+
+- Platforms: Facebook Page
+
+![Screenshot of Facebook Page](documentation/facebook-page-screenshot.png)
+
+- Facebook Post
+
+![Screenshot of first Facebook post](documentation/facebook-first-post-screenshot.png)
 
 ## Content is King
 

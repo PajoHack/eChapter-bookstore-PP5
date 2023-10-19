@@ -91,49 +91,49 @@ The overarching epic of the eChapter project is to revolutionize the way people 
 
 | User Story Number | As A/An | I can                     | So that                                                 |
 |-------------------|---------|---------------------------|---------------------------------------------------------|
-| 1                 | Shopper | View a list of books       | I can select books to purchase                          |
-| 2                 | Shopper | View individual book details| I can see the price, description, rating and cover image|
-| 3                 | Shopper | Identify items on sale     | I can take advantage of bargain offerings               |
-| 4                 | Shopper | Easily view total of purchases at all times | I avoid spending too much        |
+| 1                 | Shopper | View a list of books       | I can select books to purchase      [#1](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/1)                    |
+| 2                 | Shopper | View individual book details| I can see the price, description, rating and cover image [#2](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/2)|
+| 3                 | Shopper | ~~Identify items on sale~~     | ~~I can take advantage of bargain offerings~~              [#3](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/3) |
+| 4                 | Shopper | Easily view total of purchases at all times | I avoid spending too much        [#4](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/4)|
 
 ### Registration and User Accounts
 
 | User Story Number | As A/An    | I can                        | So that                                         |
 |-------------------|------------|------------------------------|--------------------------------------------------|
-| 5                 | Site User  | Register for an account      | I have a personal account available to me       |
-| 6                 | Site User  | Quickly login & logout       | I can access my personal information or logout  |
-| 7                 | Site User  | Reset my password if forgotten| I can recover access to my account             |
-| 8                 | Site User  | Have a User Profile          | I can view order history & order confirmations  |
-| 9                 | Site User  | Receive an email confirmation after registering| I can verify my account was setup correctly |
+| 5                 | Site User  | Register for an account      | I have a personal account available to me      [#5](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/5) |
+| 6                 | Site User  | Quickly login & logout       | I can access my personal information or logout  [#6](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/6)|
+| 7                 | Site User  | Reset my password if forgotten| I can recover access to my account             [#7](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/7)|
+| 8                 | Site User  | Have a User Profile          | I can view order history & order confirmations  [#8](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/8)|
+| 9                 | Site User  | Receive an email confirmation after registering| I can verify my account was setup correctly [#9](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/9)|
 
 ### Sorting and Searching
 
 | User Story Number | As A/An | I can                     | So that                                             |
 |-------------------|---------|---------------------------|------------------------------------------------------|
-| 10                | Shopper | Sort the list of books     | I can see the best rated, best priced, and see books sorted by category |
-| 11                | Shopper | Sort by specific category  | I can see all books in that particular category     |
-| 12                | Shopper | Search for a book by title or description| I can search for specific books   |
-| 13                | Shopper | Easily view search results | I can determine if a book is available              |
+| 10                | Shopper | Sort the list of books     | I can see the best rated, best priced, and see books sorted by category [#10](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/10)|
+| 11                | Shopper | Sort by specific category  | I can see all books in that particular category    [#11](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/11) |
+| 12                | Shopper | Search for a book by title or description| I can search for specific books  [#12](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/12) |
+| 13                | Shopper | Easily view search results | I can determine if a book is available             [#13](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/13) |
 
 ### Products & Checkout
 
 | User Story Number | As A/An | I can                     | So that                                             |
 |-------------------|---------|---------------------------|------------------------------------------------------|
-| 14                | Shopper | Select the product I want to purchase | I can select the correct book               |
-| 15                | Shopper | View items in my bag       | I can see the total cost and items in it            |
-| 16                | Shopper | Adjust the amount of individual items in the bag| I can make changes before checkout if required |
-| 17                | Shopper | Enter my payment information| Checkout quickly with minimal fuss                 |
-| 18                | Shopper | Feel safe about entering my payment details | I can confidently provide payment details |
-| 19                | Shopper | View an order confirmation after checkout | I can ensure that I ordered the correct items |
-| 20                | Shopper | Receive an email confirmation after checkout | I have a record of my purchase |
+| 14                | Shopper | Select the product I want to purchase | I can select the correct book              [#14](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/14) |
+| 15                | Shopper | View items in my bag       | I can see the total cost and items in it            [#15](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/15)|
+| 16                | Shopper | Adjust the amount of individual items in the bag| I can make changes before checkout if required [#16](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/16)|
+| 17                | Shopper | Enter my payment information| Checkout quickly with minimal fuss                 [#17](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/17)|
+| 18                | Shopper | Feel safe about entering my payment details | I can confidently provide payment details [#18](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/18)|
+| 19                | Shopper | View an order confirmation after checkout | I can ensure that I ordered the correct items [#19](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/19)|
+| 20                | Shopper | Receive an email confirmation after checkout | I have a record of my purchase [#20](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/20)|
 
 ### Admin or Store Owner
 
 | User Story Number | As A/An      | I can                | So that                                             |
 |-------------------|--------------|----------------------|------------------------------------------------------|
-| 21                | Store Owner  | Add a book            | I can add new stock to my store                     |
-| 22                | Store Owner  | Edit or update a product| I can alter prices, description and image          |
-| 23                | Store Owner  | Delete a book         | I can remove books that are sold out or no longer available |
+| 21                | Store Owner  | Add a book            | I can add new stock to my store                  [#21](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/21)   |
+| 22                | Store Owner  | Edit or update a product| I can alter prices, description and image         [#22](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/22) |
+| 23                | Store Owner  | Delete a book         | I can remove books that are sold out or no longer available [#23](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/23)|
 
 # Features
 
