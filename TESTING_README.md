@@ -81,6 +81,8 @@ Manual testing was conducted to ensure a thorough evaluation of the site's funct
 2. **Cross-Browser Compatibility**
     - Tested the site on different browsers like Chrome, Firefox, and Safari to ensure cross-browser compatibility.
 
+![Screenshot from am I responsive website](documentation/screenshot-from-am-i-responsive.png)
+
 ### Error Handling
 
 1. **404 and 403 Pages**

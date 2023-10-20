@@ -2,7 +2,7 @@
 
 Visit the live site: [eChapter](https://echapter-pp5-a9a674e8d251.herokuapp.com/)
 
-![Screenshot of the home page](documentation/screenshot-of-the-home-page.png)
+![Screenshot from am I responsive website](documentation/screenshot-from-am-i-responsive.png)
 
 ## Table of Contents
 

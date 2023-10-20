@@ -475,4 +475,40 @@ input#mc-embedded-subscribe.button {
     }
 }
 
+/* Media query for very small screens */
+@media only screen and (max-width: 360px) {
+    /* Reduce the size of FontAwesome large icons */
+    .fas.fa-lg {
+        font-size: 1.2em;  
+    }
+    
+    /* Reduce the size of the containers for the icons */
+    .text-center.icon-container {
+        font-size: 0.5em; 
+    }
+
+    /* Make the hamburger icon smaller */
+    .navbar-toggler-icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
+    
+    /* Reduce size of delivery banner */
+    #delivery-banner h4 {
+        font-size: 0.8em;
+        margin: 0.2em 0;  /* Reduce vertical margin */
+    }
+
+   /* Hide the div with class .home-banner */
+   .home-banner{
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    /* Hide the h1 element with class .index-text */
+    h1.index-text {
+        display: none;
+    }
+    
+}
 
