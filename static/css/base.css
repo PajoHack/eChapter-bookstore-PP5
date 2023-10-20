@@ -404,6 +404,24 @@ input#mc-embedded-subscribe.button {
     }
 }
 
+@media (min-width: 992px) {
+    .container {
+      max-width: 80%;
+    }
+
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
 /* Adjustments for small screens */
 @media (max-width: 768px) {
     .home-banner {
@@ -446,67 +464,15 @@ input#mc-embedded-subscribe.button {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;
     }
-}
 
-@media (min-width: 992px) {
-    .container {
-      max-width: 80%;
+    .fas.fa-lg {
+        font-size: 1.2em;  
     }
 
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
+    /* Reduce the size of the containers for the icons */
+    .text-center {
+        font-size: 0.5em; 
     }
 }
 
-/* iPhone SE Specific Rules */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
 
-    /* Adjustments for the header */
-    .header-container {
-        padding-top: 6rem; /* Reduced padding */
-    }
-
-    /* Adjustments for the body */
-    body {
-        height: calc(100vh - 6rem); /* Reduced height */
-    }
-
-    /* Adjustments for the index text */
-    .index-text {
-        font-size: 1.8em; /* Slightly reduced font size */
-    }
-
-    /* Adjustments for the shop now button */
-    .shop-now-button {
-        font-size: 0.9em; /* Slightly reduced font size */
-        min-width: 9rem; /* Reduced min-width */
-    }
-
-    /* Footer content adjustments */
-    .footer-content h2, .footer-content h3, .footer-content p, .footer-content label {
-        font-size: x-small; /* Reduced font size */
-    }
-
-    /* Email input adjustments */
-    .email-button-container input[type="email"],
-    input[type="email"]#mce-EMAIL {
-        font-size: x-small; /* Reduced font size */
-    }
-
-    /* Submit button adjustments */
-    .button-div input[type="submit"],
-    input[type="submit"]#mc-embedded-subscribe {
-        font-size: x-small; /* Reduced font size */
-    }
-}

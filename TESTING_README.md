@@ -1,15 +1,27 @@
-# Testing
+# Testing README
+
+## Table Of Contents
+
+1. [Introduction](#introduction)
+2. [Code Validation](#code-validation)
+3. [Browser Compatibility](#browser-compatibility)
+4. [LightHouse Testing](#lighthouse-testing)
+5. [Performance Testing](#performance-testing)
+6. [Manual Testing](#manual-testing)
+7. [User Stories Testing](#user-stories-testing)
+
+## Introduction
 
 This document outlines the various testing methods applied to ensure the functionality, accessibility, and compatibility of the eChapter application.
 
-### Code Validation
+## Code Validation
 
 - HTML: Validated using W3C HTML Validator.
 - CSS: Validated using W3C CSS Validator.
 - JavaScript: Checked for errors using JSHint.
 - Python: Checked for PEP 8 compliance using pylint.
 
-### Browser Compatibility
+## Browser Compatibility
 
 The site was tested on multiple browsers including:
 
@@ -18,15 +30,15 @@ The site was tested on multiple browsers including:
 - Microsoft Edge
 - Safari
 
-### Lighthouse Testing
+## Lighthouse Testing
 
 ![Screenshot of lighthouse testing score](documentation/lighthouse-score-screenshot.png)
 
-### Performance Testing
+## Performance Testing
 
 Used Google Lighthouse to analyze the performance of the website on various fronts such as Performance, Accessibility, Best Practices, and SEO.
 
-### Manual Testing
+## Manual Testing
 
 Manual testing was conducted to ensure a thorough evaluation of the site's functionality and usability. Below are the areas and features that were manually tested:
 
@@ -81,15 +93,7 @@ Manual testing was conducted to ensure a thorough evaluation of the site's funct
 - All tests were conducted multiple times and at different stages of development to confirm consistency.
 - Where issues were found, they were addressed immediately and re-tested to confirm they were resolved.
 
-
-
-### User Stories Testing
-
-For each user story, a systematic testing approach was followed to ensure that the website meets the needs of its different types of users.
-
-## User Stories Testing
-
-For each user story, a systematic testing approach was followed to ensure that the website meets the needs of its different types of users.
+[Back to the top](#)
 
 ## User Stories Testing
 
@@ -121,3 +125,4 @@ For each user story, a systematic testing approach was followed to ensure that t
 | 22                | Store Owner    | Edit or update a product                                            | Edited an existing book's details.                                                  | Passed | Changes were reflected immediately. |
 | 23                | Store Owner    | Delete a book                                                       | Deleted a book via the product management page.                                      | Passed | Book was successfully removed from the store. |
 
+[Back to the top](#)
