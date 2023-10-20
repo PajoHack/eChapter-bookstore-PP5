@@ -1,6 +1,55 @@
 # eChapter - Online Bookstore
 
+Visit the live site: [eChapter](https://echapter-pp5-a9a674e8d251.herokuapp.com/)
+
 ![Screenshot of the home page](documentation/screenshot-of-the-home-page.png)
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+   - [Buiness Goals](#business-goals)
+   - [Customer Goals](#customer-goals)
+2. [Design and UX](#design-and-ux)
+   - [Wireframes](#wireframes) 
+   - [Database Model](#database-model) 
+3. [Epic and User Stories](#epic-and-user-stories)
+   - [Epic](#epic)
+   - [User Stories](#user-stories)
+4. [Features](#features)
+   - [Site Navigation](#site-navigation)
+   - [Footer](#footer)
+   - [Home Page](#home-page)
+   - [Products Page](#products-page)
+   - [Book Details Page](#book-details-page)
+   - [Shopping Bag Page](#shopping-bag-page)
+   - [Checkout Page](#checkout-page)
+   - [Profile Page](#profile-page)
+   - [Product Management Page](#product-management-page)
+   - [Confirmation Of Purchase Email](#confirmation-of-purchase-email)
+   - [Toast Notifications](#toast-notifications)
+   - [Custom Error Pages](#custom-error-pages)
+   - [Contact Us Form](#contact-us-form)
+5. [Future Features](#future-features)
+6. [SEO & Marketing](#seo--marketing)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
+   - [Deploying to Heroku](#deploying-to-heroku)
+   - [AWS](#aws)
+   - [Cloning and Forking](#cloning-and-forking-the-github-repository)
+9. [Technologies Used](#technologies-used)
+   - [Programming Languages](#programming-languages)
+   - [Frameworks & Libraries](#frameworks--libraries)
+   - [APIs](#apis)
+   - [Databases](#databases)
+   - [Version Control](#version-control)
+   - [Hosting/ Servers](#hostingservers)
+   - [Storage](#storage)
+   - [Planning & Documentation](#planning-and-documentation-tools)
+   - [Other Tools](#other-tools)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
+
+# Introduction
 
 The digital age has made it easier than ever to access a wide range of books across multiple genres. However, with the vast array of options available, it can be overwhelming for readers to find books that cater to their specific interests, let alone in a user-friendly manner. eChapter was created as a solution to this problem, offering a carefully curated collection of books for a diverse readership, all available at the click of a button.
 
@@ -13,6 +62,7 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 - Secure Transactions: Integration with Stripe ensures a secure and smooth checkout process.
 - Accessibility: The responsive design ensures that users can access the site from any device
 - Personalized Experience: User profiles and book recommendations cater to individual reading preferences, enhancing the shopping experience.
+
 
 ### Business Goals
 
@@ -30,7 +80,9 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 - Personalization: Tailored recommendations and a user-friendly interface for a unique shopping experience.
 - Support: Efficient customer support to assist with inquiries and issues.
 
-## Design and UX
+[Back to the top](#)
+
+# Design and UX
 
 ### Background Colors
 
@@ -79,7 +131,7 @@ The color scheme is a crucial part of the overall design and user experience of 
 - UserProfile has a OneToOneField relationship with Django's built-in User model.
 - The Contact model in the contactus app is not directly related to any other models.
 
-## Epic and User Stories
+# Epic and User Stories
 
 ### Epic
 
@@ -134,6 +186,8 @@ The overarching epic of the eChapter project is to revolutionize the way people 
 | 21                | Store Owner  | Add a book            | I can add new stock to my store                  [#21](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/21)   |
 | 22                | Store Owner  | Edit or update a product| I can alter prices, description and image         [#22](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/22) |
 | 23                | Store Owner  | Delete a book         | I can remove books that are sold out or no longer available [#23](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/23)|
+
+[Back to the top](#)
 
 # Features
 
@@ -292,12 +346,16 @@ The 'Contact Us' section serves as a crucial touchpoint between the website and 
 
 ![Screenshot of the contact us form](documentation/screenshot-of-contact-us-form.png)
 
+[Back to the top](#)
+
 # Future Features
 
 - User Reviews and Ratings: Allow registered users to leave reviews and ratings for books they have purchased, which could then be displayed on each book's detail page.
 - Gift Cards and Coupons: Implement a system where users can purchase and redeem gift cards or coupons, providing more flexible payment options.
 - Digital Downloads: Offer books in digital formats such as ePub or PDF, in addition to physical copies.
 - Social Media Integration: Allow users to share their purchases or favorite books on social media platforms directly from the site.
+
+[Back to the top](#)
 
 # Seo & Marketing
 
@@ -348,6 +406,8 @@ To Fork:
 - Click the "Fork" button at the top-right corner. This creates a copy of the project in your GitHub account.
 - You can now clone this forked repository using the steps above, make changes, and create pull requests to contribute to the original project.
 
+[Back to the top](#)
+
 # Technologies Used
 
 ### Programming Languages
@@ -396,12 +456,19 @@ To Fork:
 - Font Awesome: For icons used across the website.
 - Mailchimp: For email subscriptions and marketing.
 
+[Back to the top](#)
+
 # Credits
 
 ### Boilerplate Code
 
 Boutique Ado Project: The base code for this project was inspired by the Boutique Ado project. This includes the Stripe payment integration and the Toasts functionality for notifications.
 
+[Back to the top](#)
+
+
 # Acknowledgements
 
 I would like to express gratitude to my mentor, Brian Macharia, for his support and invaluable guidance throughout the course of this project. His expertise and insights have been instrumental in helping me navigate through the challenges I encountered, and his constructive feedback has been greatly appreciated. 
+
+[Back to the top](#)
