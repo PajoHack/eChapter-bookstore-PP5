@@ -18,7 +18,13 @@ This document outlines the various testing methods applied to ensure the functio
 ## Code Validation
 
 - HTML: Validated using W3C HTML Validator.
+
+![Screenshot of HTMl validation](documentation/screenshot-of-w3c-html-validation.png)
+
 - CSS: Validated using W3C CSS Validator.
+
+![Screenshot of CSS validation](documentation/screenshot-of-w3c-jigsaw-css-validation.png)
+
 - JavaScript: Checked for errors using JSHint.
 - Python: Checked for PEP 8 compliance using pylint.
 

@@ -1,20 +1,29 @@
 <script>
-
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        var minusDisabled = currentValue < 2;
-        var plusDisabled = currentValue > 98;
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+        // Find all instances of qty_input and buttons using data-item_id
+        var qtyInputs = $(`.qty_input[data-item_id=${itemId}]`);
+        var decrementButtons = $(`.decrement-qty[data-item_id=${itemId}]`);
+        var incrementButtons = $(`.increment-qty[data-item_id=${itemId}]`);
+
+        qtyInputs.each(function(index, element) {
+            var currentValue = parseInt($(element).val());
+            var minusDisabled = currentValue < 2;
+            var plusDisabled = currentValue > 98;
+
+            // Update the corresponding decrement and increment buttons
+            $(decrementButtons[index]).prop('disabled', minusDisabled);
+            $(incrementButtons[index]).prop('disabled', plusDisabled);
+        });
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
-    var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
-        var itemId = $(allQtyInputs[i]).data('item_id');
-        handleEnableDisable(itemId);
-    }
+    $(document).ready(function() {
+        $('.qty_input').each(function(index, element) {
+            var itemId = $(element).data('item_id');
+            handleEnableDisable(itemId);
+        });
+    });
 
     // Check enable/disable every time the input is changed
     $('.qty_input').change(function() {
