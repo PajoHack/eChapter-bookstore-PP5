@@ -1,5 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <!-- <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li> -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Books
@@ -15,7 +20,7 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fiction-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Genres
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="book-category-link">
+            <div class="dropdown-menu border-0" aria-labelledby="fiction-link">
                 <a href="{% url 'products' %}?category=Fiction" class="dropdown-item">Fiction</a>
                 <a href="{% url 'products' %}?category=Science" class="dropdown-item">Science</a>
                 <a href="{% url 'products' %}?category=History" class="dropdown-item">History</a>
@@ -32,7 +37,7 @@
                 <a href="{% url 'products' %}?category=Biography" class="dropdown-item">Biography</a>
                 <a href="{% url 'products' %}?category=Science" class="dropdown-item">Science</a>
                 <a href="{% url 'products' %}?category=History" class="dropdown-item">History</a>
-                <a href="{% url 'products' %}?category=Non-fiction,Science,History, Biography" class="dropdown-item">All Non-Fiction</a>
+                <a href="{% url 'products' %}?category=Non-fiction,Science,History,Biography" class="dropdown-item">All Non-Fiction</a>
             </div>
         </li>
         

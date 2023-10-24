@@ -9,13 +9,14 @@ Visit the live site: [eChapter](https://echapter-pp5-a9a674e8d251.herokuapp.com/
 1. [Introduction](#introduction)
    - [Buiness Goals](#business-goals)
    - [Customer Goals](#customer-goals)
-2. [Design and UX](#design-and-ux)
+2. [Acceptance Criteria](#acceptance-criteria)
+3. [Design and UX](#design-and-ux)
    - [Wireframes](#wireframes) 
    - [Database Model](#database-model) 
-3. [Epic and User Stories](#epic-and-user-stories)
+4. [Epic and User Stories](#epic-and-user-stories)
    - [Epic](#epic)
    - [User Stories](#user-stories)
-4. [Features](#features)
+5. [Features](#features)
    - [Site Navigation](#site-navigation)
    - [Footer](#footer)
    - [Home Page](#home-page)
@@ -29,31 +30,33 @@ Visit the live site: [eChapter](https://echapter-pp5-a9a674e8d251.herokuapp.com/
    - [Toast Notifications](#toast-notifications)
    - [Custom Error Pages](#custom-error-pages)
    - [Contact Us Form](#contact-us-form)
-5. [Future Features](#future-features)
-6. [SEO & Marketing](#seo--marketing)
-7. [Testing](#testing)
-8. [Deployment](#deployment)
-   - [Deploying to Heroku](#deploying-to-heroku)
-   - [AWS](#aws)
-   - [Cloning and Forking](#cloning-and-forking-the-github-repository)
-9. [Technologies Used](#technologies-used)
-   - [Programming Languages](#programming-languages)
-   - [Frameworks & Libraries](#frameworks--libraries)
-   - [APIs](#apis)
-   - [Databases](#databases)
-   - [Version Control](#version-control)
-   - [Hosting/ Servers](#hostingservers)
-   - [Storage](#storage)
-   - [Planning & Documentation](#planning-and-documentation-tools)
-   - [Other Tools](#other-tools)
-10. [Credits](#credits)
-11. [Acknowledgements](#acknowledgements)
+6. [Future Features](#future-features)
+7. [SEO & Marketing](#seo--marketing)
+8. [Testing](#testing)
+9. [Project Management and Documentation](#project-management-and-documentation)
+10. [Deployment](#deployment)
+      - [Deploying to Heroku](#deploying-to-heroku)
+      - [AWS](#aws)
+      - [Cloning and Forking](#cloning-and-forking-the-github-repository)
+11. [Technologies Used](#technologies-used)
+      - [Programming Languages](#programming-languages)
+      - [Frameworks & Libraries](#frameworks--libraries)
+      - [APIs](#apis)
+      - [Databases](#databases)
+      - [Version Control](#version-control)
+      - [Hosting/ Servers](#hostingservers)
+      - [Storage](#storage)
+      - [Planning & Documentation](#planning-and-documentation-tools)
+      - [Other Tools](#other-tools)
+12. [MoSCow Prioritization](#moscow-prioritization)
+13. [Credits](#credits)
+14. [Acknowledgements](#acknowledgements)
 
 # Introduction
 
 The digital age has made it easier than ever to access a wide range of books across multiple genres. However, with the vast array of options available, it can be overwhelming for readers to find books that cater to their specific interests, let alone in a user-friendly manner. eChapter was created as a solution to this problem, offering a carefully curated collection of books for a diverse readership, all available at the click of a button.
 
-The primary purpose of eChapter is to provide an online platform where users can explore, select, and purchase books with ease. Our aim is to simplify the book-buying process while offering a wide range of options to cater to varied reading interests. eChapter targets a wide range of audiences, including but not limited to: avid readers, casual readers, students and profesionals alike.
+The primary purpose of eChapter is to provide an online platform where users can explore, select, and purchase books with ease. Our aim is to simplify the book-buying process while offering a wide range of options to cater to varied reading interests. eChapter targets a wide range of audiences, including but not limited to: avid readers, casual readers, students and profesionals.
 
 Addressing User Needs, eChapter aims to meet the varying needs of its target audience. 
 
@@ -79,6 +82,81 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 - Diversity: Access to a broad range of titles across various genres and themes.
 - Personalization: Tailored recommendations and a user-friendly interface for a unique shopping experience.
 - Support: Efficient customer support to assist with inquiries and issues.
+
+[Back to the top](#)
+
+## Acceptance Criteria
+
+### User Authentication
+
+#### Login
+
+- Users must enter both a username and a password.
+- Users should receive an error message for incorrect login credentials.
+- Successful login directs the user to their dashboard.
+
+#### Sign Up
+
+- Users must enter a valid email address.
+- Password must be at least 8 characters long.
+- A confirmation email is sent upon successful registration.
+
+### User Profile
+
+- Users can view their profile containing past orders.
+- Users can update their profile information.
+
+### Product Management (For Admins)
+
+#### Add New Book
+
+- Admins can add a new book to the store.
+- All book details such as title, author, price, and ISBN must be provided.
+- Book cover image should be uploadable.
+
+#### Edit Existing Book
+
+- Admins can edit the details of an existing book.
+- Changes should reflect immediately.
+
+### Book Browsing and Search
+
+- Users can browse books by categories and price.
+- A search function should return relevant results based on book title or author.
+
+### Shopping Bag
+
+#### Add to Bag
+
+- Users can add books to their shopping bag.
+- The bag should update in real-time.
+
+#### Update Bag
+
+- Users can modify the quantity of books in the shopping bag.
+- The subtotal should update dynamically.
+
+#### Remove from Bag
+
+- Users can remove items from the bag.
+- The item should be immediately removed, and the total price should update.
+
+### Checkout
+
+- Users can proceed to checkout from the bag.
+- All required fields like shipping address and payment details must be filled out.
+- Users should be able to use Stripe for payments.
+
+### Payments
+
+- Stripe should process payments successfully.
+- Users should receive a confirmation email upon successful payment.
+- The admin should be able to see the payment in the Stripe dashboard.
+
+### Miscellaneous
+
+- The site should be responsive, especially on small screens (mobiles and tablets).
+- Users should receive notifications for major actions like login, book added to bag, and successful payment.
 
 [Back to the top](#)
 
@@ -365,6 +443,26 @@ The 'Contact Us' section serves as a crucial touchpoint between the website and 
 
 [Testing README link](TESTING_README.md)
 
+# Project Management and Documentation
+
+## GitHub Project Boards
+
+I used GitHub Project Boards to manage the tasks and sprints for the development of eChapter. Each sprint was represented as a separate column, and tasks were added as cards within these columns. We moved the cards through statuses like 'To Do', 'In Progress', and 'Done' to reflect their current state.
+
+Example: [GitHub Project Board](https://github.com/users/PajoHack/projects/9)
+
+GitHub Issues
+Issues were used to break down tasks into manageable units of work. Each issue was tagged with appropriate labels for easy categorization and was linked to the corresponding milestone and project board.
+
+Example: [USER STORY: Add a book #21](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/21)
+
+GitHub Milestones
+Milestones were used to mark significant phases in the project. Each milestone included a group of related issues that were to be completed for that phase to be considered complete.
+
+Example: [Integrate Stripe](https://github.com/PajoHack/eChapter-bookstore-PP5/milestone/7)
+
+[Back to the top](#)
+
 # Deployment
 
 ### Deploying to Heroku
@@ -455,6 +553,34 @@ To Fork:
 
 - Font Awesome: For icons used across the website.
 - Mailchimp: For email subscriptions and marketing.
+
+[Back to the top](#)
+
+## MoSCoW Prioritization
+
+For this project, we used the MoSCoW method for prioritizing features. Below is a breakdown of how features were categorized:
+
+### Must-have
+
+- Secure user authentication
+- Basic CRUD for books
+- Payment integration (Stripe)
+
+### Should-have
+
+- User profiles
+- Advanced Search Filters
+
+### Could-have
+
+- Social Media Sharing
+
+### Won't-have (this time)
+
+- Reviews and Ratings
+- Items on Sale
+
+By using MoSCoW prioritization, we were able to focus on delivering the most critical features first, while also planning for future improvements.
 
 [Back to the top](#)
 

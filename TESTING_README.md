@@ -9,6 +9,7 @@
 5. [Performance Testing](#performance-testing)
 6. [Manual Testing](#manual-testing)
 7. [User Stories Testing](#user-stories-testing)
+8. [Stripe](#manual-testing-of-stripe-integration)
 
 ## Introduction
 
@@ -126,5 +127,29 @@ For each user story, a systematic testing approach was followed to ensure that t
 | 21                | Store Owner    | Add a book                                                          | Added a new book via the product management page.                                    | Passed | New book appeared in the store after addition. |
 | 22                | Store Owner    | Edit or update a product                                            | Edited an existing book's details.                                                  | Passed | Changes were reflected immediately. |
 | 23                | Store Owner    | Delete a book                                                       | Deleted a book via the product management page.                                      | Passed | Book was successfully removed from the store. |
+
+[Back to the top](#)
+
+## Manual Testing of Stripe Integration
+
+### Objective
+
+To ensure that the Stripe payment gateway is successfully integrated and is capable of handling transactions.
+
+### Steps Taken
+
+1. **Placing an Order**: Went through the eChapter site's checkout process and placed an order. Used the test VISA card number `4242 4242 4242 4242` for payment.
+  
+2. **Confirmation**: Checked for the order confirmation on the eChapter site to make sure the transaction appears successful from the user's end.
+
+3. **Stripe Dashboard**: Logged into Stripe's admin dashboard to confirm that the transaction was processed.
+  
+4. **Webhook Logs**: Reviewed webhook logs in Stripe to ensure they received the correct information and processed it as expected.
+
+### Results
+
+The test transaction was successful, and all data was correctly processed by Stripe.
+
+![Screenshot of Stripe successful payment](documentation/screenshot-of-webhook-success.png)
 
 [Back to the top](#)

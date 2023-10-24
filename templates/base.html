@@ -207,12 +207,12 @@
 {% block postloadjs %}
 
     <!-- Toasts -->
-    <script type="text/javascript">
+    <script>
     $('.toast').toast('show');
     </script>
 
     <!-- Mailchimp js -->
-     <script type="text/javascript">
+     <script>
         $(document).ready(function() {
             $.getScript("{% static 'js/mailchimp.js' %}");
         });
