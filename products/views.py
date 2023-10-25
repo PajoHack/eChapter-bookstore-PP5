@@ -41,13 +41,20 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(title__icontains=query) | Q(author__name__icontains=query)
+            queries = (
+                Q(title__icontains=query) |
+                Q(author__name__icontains=query)
+            )
             books = books.filter(queries)
 
-    current_sorting = f'{sort}_{direction}' if sort and direction else 'default'
+    current_sorting = (
+        f'{sort}_{direction}' if sort and direction
+        else 'default'
+    )
 
     context = {
         'books': books,
@@ -61,7 +68,7 @@ def all_products(request):
 
 def book_detail(request, book_id):
     """ A view to show individual book details """
-    
+
     book = get_object_or_404(Book, pk=book_id)
 
     context = {
@@ -85,12 +92,14 @@ def add_book(request):
             messages.success(request, 'Successfully added book!')
             return redirect(reverse('book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to add book. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to add book. Please ensure the form is valid.'
+                )
     else:
         form = BookForm()
-        
+
     template = 'products/add_book.html'
-    
+
     context = {
         'form': form,
     }
@@ -113,7 +122,8 @@ def edit_book(request, book_id):
             messages.success(request, 'Successfully updated book!')
             return redirect(reverse('book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to update book. Please ensure the form is valid.')
+            msg = 'Failed to update book. Please ensure the form is valid.'
+            messages.error(request, msg)
     else:
         form = BookForm(instance=book)
         messages.info(request, f'You are editing {book.title}')

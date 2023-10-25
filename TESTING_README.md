@@ -17,16 +17,32 @@ This document outlines the various testing methods applied to ensure the functio
 
 ## Code Validation
 
-- HTML: Validated using W3C HTML Validator.
+### HTML: Validated using W3C HTML Validator.
 
 ![Screenshot of HTMl validation](documentation/screenshot-of-w3c-html-validation.png)
 
-- CSS: Validated using W3C CSS Validator.
+### CSS: Validated using W3C CSS Validator.
 
 ![Screenshot of CSS validation](documentation/screenshot-of-w3c-jigsaw-css-validation.png)
 
-- JavaScript: Checked for errors using JSHint.
-- Python: Checked for PEP 8 compliance using pylint.
+### JavaScript: Checked for errors using JSHint.
+
+### Python: Checked for PEP 8 compliance.
+
+I used flake8 to validate the python code. I ran `python3 -m flake8 --exclude=*/migrations/*,./echapter/settings.py,./checkout/webhooks.py,./checkout/webhook_handler.py,.devcontainer/build-assets/*` 
+
+### Exclusions
+
+- Migrations: Auto-generated and not meant to be manually altered, hence excluded.
+Settings File (echapter/settings.py): Contains configurations that may not strictly adhere to PEP 8, excluded for practical reasons.
+- Webhook Files (webhooks.py, webhook_handler.py): May include vendor-specific structures, leading to intentional deviations from PEP 8 guidelines.
+- Build Assets: Any files under the .devcontainer/build-assets/ folder were excluded as they are not part of the application logic.
+
+### Resolved Issues
+
+- Line Length: Corrected lines that exceeded the recommended length limit to adhere to PEP 8 standards.
+- Unused Imports: Removed unnecessary import statements that were not being utilized.
+- Whitespace: Removed unnecessary trailing whitespaces.
 
 ## Browser Compatibility
 
