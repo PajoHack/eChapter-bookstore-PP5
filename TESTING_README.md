@@ -25,7 +25,11 @@ This document outlines the various testing methods applied to ensure the functio
 
 ![Screenshot of CSS validation](documentation/screenshot-of-w3c-jigsaw-css-validation.png)
 
-### JavaScript: Checked for errors using JSHint.
+### JavaScript Linting
+
+All JavaScript snippets within the project have been linted using [JSHint](https://jshint.com/). The linter was configured to recognize jQuery syntax to ensure accurate linting. During this process, several missing semicolons were identified and corrected. As a result, the project now passes JSHint validation with no errors or warnings, contributing to the overall code quality and consistency.
+
+![Screenshot of JSHint result](documentation/screenshot-of-js-hint.png)
 
 ### Python: Checked for PEP 8 compliance.
 
