@@ -1,5 +1,7 @@
 # Testing README
 
+[Back to Main README](README.md)
+
 ## Table Of Contents
 
 1. [Introduction](#introduction)
@@ -17,9 +19,11 @@ This document outlines the various testing methods applied to ensure the functio
 
 ## Code Validation
 
-### HTML: Validated using W3C HTML Validator.
+### HTML: Validated using W3C HTML Validator & htmlhint
 
 ![Screenshot of HTMl validation](documentation/screenshot-of-w3c-html-validation.png)
+
+![Screenshot of Htmlhint validation](documentation/screenshot-of-html-hint-results.png)
 
 ### CSS: Validated using W3C CSS Validator.
 
@@ -50,12 +54,22 @@ Settings File (echapter/settings.py): Contains configurations that may not stric
 
 ## Browser Compatibility
 
-The site was tested on multiple browsers including:
+The eChapter website has been tested across various browsers and operating systems to ensure a consistent user experience. Below is a list of the browsers and the operating systems on which the testing was performed:
 
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
 - Safari
+
+### Operating Systems Tested
+
+- Windows 10
+- macOS 14 Sonoma
+- iOS 15
+- Android 12
+
+### Known Issues and Resolutions
+- In Safari on iOS, there was a minor layout issue with the footer, which was resolved by adjusting the CSS properties.
 
 ## Lighthouse Testing
 
@@ -179,3 +193,5 @@ The test transaction was successful, and all data was correctly processed by Str
 ![Screenshot of Stripe successful payment](documentation/screenshot-of-webhook-success.png)
 
 [Back to the top](#)
+
+[Back to Main README](README.md)

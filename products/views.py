@@ -8,7 +8,10 @@ from .forms import BookForm
 
 
 def all_products(request):
-    """ A view to show all books, including sorting and search queries """
+    """
+    A view to return all books, with options for sorting, filtering by categories,
+    and searching. Handles sorting and search query parameters from the request.
+    """
 
     books = Book.objects.all()
     query = None
@@ -17,6 +20,7 @@ def all_products(request):
     direction = None
 
     if request.GET:
+        # Handle sorting
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -26,6 +30,7 @@ def all_products(request):
             if sortkey == 'category':
                 sortkey = 'category__name'
 
+            # Handle direction of sorting (ascending/descending)
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -33,11 +38,13 @@ def all_products(request):
 
             books = books.order_by(sortkey)
 
+        # Filter books by categories
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             books = books.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        # Handle search queries
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -80,7 +87,10 @@ def book_detail(request, book_id):
 
 @login_required
 def add_book(request):
-    """ Add a book to the store """
+    """
+    A view to add a new book to the store.
+    Only superusers are allowed to add books.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -109,7 +119,10 @@ def add_book(request):
 
 @login_required
 def edit_book(request, book_id):
-    """ Edit a book in the store """
+    """
+    A view to edit an existing book in the store.
+    Only superusers are allowed to edit books.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -139,7 +152,10 @@ def edit_book(request, book_id):
 
 @login_required
 def delete_book(request, book_id):
-    """ Delete a book from the store """
+    """ 
+    A view to delete a book from the store. 
+    Only accessible to superusers.
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

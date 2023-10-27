@@ -1,5 +1,7 @@
 # SEO and Marketing Documentation for eChapter
 
+[Back to Main README](README.md)
+
 ## Table Of Contents
 
 1. [Introduction](#introduction)
@@ -63,3 +65,5 @@ Leveraging Facebook's analytics tools, we'll continually monitor key performance
 In the digital age, content serves as the cornerstone of all SEO and marketing efforts. High-quality, relevant content not only enhances user experience but also boosts the website’s visibility on search engines. We prioritize generating unique and compelling content for book descriptions, blog posts, and marketing materials to engage our audience and establish eChapter as an authority in the online book retail space.
 
 [Back to the top](#)
+
+[Back to Main README](README.md)

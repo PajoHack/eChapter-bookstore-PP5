@@ -3,6 +3,12 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """
+    A form for collecting order details on the checkout page.
+    This form is associated with the Order model and includes fields
+    for the user's contact and shipping information. It also customizes
+    the appearance and behavior of these fields using the __init__ method.
+    """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',

@@ -50,7 +50,8 @@ Visit the live site: [eChapter](https://echapter-pp5-a9a674e8d251.herokuapp.com/
       - [Other Tools](#other-tools)
 12. [MoSCow Prioritization](#moscow-prioritization)
 13. [Credits](#credits)
-14. [Acknowledgements](#acknowledgements)
+14. [Media](#media)
+15. [Acknowledgements](#acknowledgements)
 
 # Introduction
 
@@ -558,7 +559,7 @@ To Fork:
 
 ## MoSCoW Prioritization
 
-For this project, we used the MoSCoW method for prioritizing features. Below is a breakdown of how features were categorized:
+For this project, I used the MoSCoW method for prioritizing features. Below is a breakdown of how features were categorized:
 
 ### Must-have
 
@@ -592,6 +593,14 @@ Boutique Ado Project: The base code for this project was inspired by the Boutiqu
 
 [Back to the top](#)
 
+# Media
+
+The book cover images used in this project were sourced from [Public Domain Pictures](https://www.publicdomainpictures.net/en/) & [Pixabay](https://pixabay.com/). According to the websites, all images I used are free to use without the requirement for attribution.
+
+The background image used in this project was sourced from [Freepik](https://www.freepik.com/free-ai-image/view-3d-kids-library_59999859.htm#fromView=search&term=view-3d-kids-library&page=1&position=8&track=ais_ai_generated).
+
+
+[Back to the top](#)
 
 # Acknowledgements
 

@@ -1,4 +1,6 @@
+<!-- mobile-top-header taken from the CI Boutique Ado Walkthrough Project -->
 <ul>
+    
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -6,6 +8,7 @@
             <p class="my-0">Search</p>
         </div>
     </a>
+    <!-- Search Dropdown Menu -->
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
@@ -22,7 +25,7 @@
     </div>
 </li>
 
-
+<!-- User Account Dropdown -->
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options-desktop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -44,7 +47,7 @@
     </div>
 </li>
 
-
+<!-- Shopping Bag -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">

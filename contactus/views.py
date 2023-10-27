@@ -4,10 +4,11 @@ from .forms import ContactForm
 
 
 def contact_us(request):
+    """  A view to handle the contact us form submission """
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
+        if form.is_valid(): # Validates the form data
+            form.save() # Saves the form data to the database
             messages.success(
                 request,
                 (

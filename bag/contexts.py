@@ -5,7 +5,18 @@ from products.models import Book
 
 
 def bag_contents(request):
+    """
+    Calculates the contents of the shopping bag, including individual and total prices,
+    and the delivery cost if applicable.
 
+    Args:
+        request (HttpRequest): The request object to access the session data.
+
+    Returns:
+        dict: A dictionary containing the details of the bag contents, including 
+              the list of items, total cost, delivery cost, and grand total.
+    """
+    
     bag_items = []
     total = 0
     book_count = 0

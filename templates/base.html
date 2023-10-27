@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
+    <!-- Base template taken from the CI Boutique Ado Walkthrough Project -->
+    <!-- Meta Information Block -->
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -11,20 +12,22 @@
         <meta name="description" content="Explore eChapter, your go-to online bookstore for a diverse range of books across genres. 
             From best-sellers to rare finds, enjoy World-wide, Shop now!">
         <meta name="keywords" content="Online bookstore, 
-            Buy books online, Fiction books, Non-fiction books, 
-            Where to buy affordable books online, High-quality books for sale online, Where to find Fiction books online, 
-            Where to buy fiction and non-fiction novels online">
+            Buy books online, Fiction books, Non-fiction books, Books, Reading, Novels, Latest best-selling novels online, 
+            Where to buy affordable books online, Buy affordable books online, High-quality books for sale online, Where to find Fiction books online, 
+            Where to buy fiction and non-fiction novels online, Best online bookstore for fiction">
     {% endblock %}
 
     {% block extra_meta %}
     {% endblock %}
 
+    <!-- Favicon -->
     {% if debug %}
         <link rel="icon" type="image/png" href="/media/favicon.png">
     {% else %}
         <link rel="icon" type="image/png" href="https://echapter-pp5.s3.amazonaws.com/media/favicon.png">
     {% endif %}
 
+    <!-- CSS Block -->
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
@@ -33,9 +36,11 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
+    <!-- Extra CSS Block -->
     {% block extra_css %}
     {% endblock %}
 
+    <!-- JS Block -->
     {% block corejs %}
         <script src="https://kit.fontawesome.com/da855886f2.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -44,15 +49,18 @@
         <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
+    <!-- Extra JS Block -->
     {% block extra_js %}
     {% endblock %}
 
+    <!-- Page Title -->
     <title>eChapter: Online Bookstore for Diverse Reads{% block extra_title %}{% endblock %}</title>
 
   </head>
   <body>
   <div class="d-flex flex-column min-vh-100">
     
+    <!-- Header Section -->
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -132,6 +140,7 @@
   </div>
   </header>
 
+  <!-- Main Content Section -->
   <div class="content flex-grow-1 mt-5">
     {% if messages %}
     <div class="message-container">
@@ -159,66 +168,65 @@
 {% endblock %}
 </div>
 
-<!-- Footer -->
-<footer class="footer-container">
-    <div class="container quotes-container content-container">
-        <div class="row footer-content">
-            <div class="col-6">
-                <div class="social-links vertical-links">
-                    <h3>Social</h3>
-                    <p>Keep up to date with all our latest offerings!</p>
-                    <a href="https://www.facebook.com/profile.php?id=61552008725698&sk=grid" target="_blank" class="footer-link">
-                        <i class="fab fa-facebook-square"></i> Follow us on Facebook!
-                    </a>
-                    <a href="https://www.privacypolicygenerator.info/live.php?token=1CLlBOQNVnFzDRh4A9PEOCzNTV98DGpS" target="_blank" class="footer-link">
-                        Privacy Policy
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Mailchimp-content -->
-            <div class="col-6 mailchimp-content">
-                <div id="mc_embed_shell">
-                    <div id="mc_embed_signup">
-                        <form action="https://herokuapp.us21.list-manage.com/subscribe/post?u=ddfefcbcd3813d9fbc55b017a&amp;id=e9b344c0a0&amp;f_id=00aed9e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                            <div id="mc_embed_signup_scroll">
-                                <h2>Subscribe</h2>
-                                <div class="email-button-container">
-                                    <div class="mc-field-group email-div">
-                                        <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                                        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+        <!-- Footer -->
+        <footer class="footer-container">
+            <div class="container quotes-container content-container">
+                <div class="row footer-content">
+                    <div class="col-6 align-vertical">
+                        <div class="social-links vertical-links">
+                            <h3>Social</h3>
+                            <p>Keep up to date with all our latest offerings!</p>
+                            <a href="https://www.facebook.com/profile.php?id=61552008725698&sk=grid" target="_blank" rel="noopener noreferrer" class="footer-link">
+                                <i class="fab fa-facebook-square"></i> Follow us on Facebook!
+                            </a>
+                            <a href="https://www.privacypolicygenerator.info/live.php?token=1CLlBOQNVnFzDRh4A9PEOCzNTV98DGpS" target="_blank" rel="noopener noreferrer" class="footer-link">
+                                Privacy Policy
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mailchimp-content -->
+                    <div class="col-6 align-vertical mailchimp-content">
+                        <div id="mc_embed_shell">
+                            <div id="mc_embed_signup">
+                                <form action="https://herokuapp.us21.list-manage.com/subscribe/post?u=ddfefcbcd3813d9fbc55b017a&amp;id=e9b344c0a0&amp;f_id=00aed9e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                                    <div id="mc_embed_signup_scroll">
+                                        <div class="email-button-container">
+                                            <div class="input-group"></div> 
+                                            <div class="mc-field-group email-div">
+                                                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+                                            </div>
+                                            <div class="button-div"> 
+                                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                                            </div>
+                                        </div> 
                                     </div>
-                                    <div class="button-div"> 
-                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
-
-</div>
-
-{% block postloadjs %}
-
-    <!-- Toasts -->
-    <script>
-    $('.toast').toast('show');
-    </script>
-
-    <!-- Mailchimp js -->
-     <script>
-        $(document).ready(function() {
-            $.getScript("{% static 'js/mailchimp.js' %}");
-        });
-    </script>
-{% endblock %}
-
-  </body>
-</html>
+                                </form>
+                            </div>                    
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </footer> <!-- Closing footer tag -->
+    
+        </div> <!-- Closing div for d-flex flex-column min-vh-100 -->
+    
+    {% block postloadjs %}
+    
+        <!-- Toasts -->
+        <script>
+        $('.toast').toast('show');
+        </script>
+    
+        <!-- Mailchimp js -->
+         <script>
+            $(document).ready(function() {
+                $.getScript("{% static 'js/mailchimp.js' %}");
+            });
+        </script>
+    {% endblock %}
+    
+      </body>
+    </html>
+    

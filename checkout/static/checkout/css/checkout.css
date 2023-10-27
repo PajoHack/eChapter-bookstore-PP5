@@ -1,3 +1,4 @@
+/* Styles for Stripe Elements and custom form inputs */
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -57,6 +58,7 @@ select option[value=""] {
     z-index: 9999;
 }
 
+/* Styles for the loading spinner within the overlay */
 .loading-spinner {
 	display: flex;
     align-items: center;

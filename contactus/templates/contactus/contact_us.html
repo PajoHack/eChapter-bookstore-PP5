@@ -6,16 +6,16 @@
     background-image: none !important;
   }
 </style>
-  <!-- Add this line to remove the background image -->
+  
   <div class="custom-bg">
     <div class="container mt-5">
-      <!-- Adding a wrapper div -->
-      <div style="padding-top: 100px;"> <!-- Adjust this padding as needed -->
+      <!-- Wrapper div -->
+      <div style="padding-top: 100px;">
         <h2>Contact Us</h2>
       </div>
       <form method="post" class="needs-validation" novalidate>
         {% csrf_token %}
-        <!-- Assuming your form has fields like 'name', 'email', 'message' -->
+        
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" name="{{ form.name.name }}" value="{{ form.name.value|default_if_none:'' }}">
@@ -32,9 +32,6 @@
           <label for="message" class="form-label">Message</label>
           <textarea class="form-control" id="message" name="{{ form.message.name }}">{{ form.message.value|default_if_none:'' }}</textarea>
         </div>
-        <!-- <div class="text-left">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div> -->
         <div class="text-left">
           <button type="submit" class="btn btn-black btn-hover-effect">Submit</button>
         </div>        

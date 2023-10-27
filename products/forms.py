@@ -3,12 +3,14 @@ from .widgets import CustomClearableFileInput
 from .models import Book
 
 
+# Defining a form for the Book model
 class BookForm(forms.ModelForm):
 
     class Meta:
         model = Book
         fields = '__all__'
 
+    # Overriding the cover_image field to utilize a custom widget and change label
     cover_image = forms.ImageField(
         label='Image',
         required=False,

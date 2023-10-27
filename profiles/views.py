@@ -8,9 +8,14 @@ from checkout.models import Order
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """
+    Display the user's profile.
+    Handle the POST request if the user updates their profile, 
+    otherwise display the current information.
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    # Check if the request method is POST
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -24,6 +29,7 @@ def profile(request):
 
     orders = profile.orders.all()
 
+    # Define the template and context
     template = 'profiles/profile.html'
     context = {
         'form': form,
@@ -35,8 +41,13 @@ def profile(request):
 
 
 def order_history(request, order_number):
+    """
+    Display the details of a past order.
+    Also notify the user that this is a past order confirmation.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
+    # Notify the user this is a past order confirmation
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'

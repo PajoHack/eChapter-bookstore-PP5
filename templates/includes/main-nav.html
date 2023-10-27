@@ -1,14 +1,14 @@
+<!-- Main Navigation Markup taken from the CI Boutique Ado Walkthrough Project -->
 <div class="collapse navbar-collapse" id="main-nav">
+    <!-- Navigation List -->
     <ul class="navbar-nav w-auto mx-auto">
-        <!-- <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
-                Home
-            </a>
-        </li> -->
+        <!-- All Books Dropdown -->
         <li class="nav-item dropdown">
+            <!-- Dropdown Trigger -->
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Books
             </a>
+            <!-- Dropdown Menu -->
             <div class="dropdown-menu border-0" aria-labelledby="all-books-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
@@ -16,10 +16,12 @@
             </div>
         </li>
 
+        <!-- Genre Dropdown -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fiction-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Genres
             </a>
+            
             <div class="dropdown-menu border-0" aria-labelledby="fiction-link">
                 <a href="{% url 'products' %}?category=Fiction" class="dropdown-item">Fiction</a>
                 <a href="{% url 'products' %}?category=Science" class="dropdown-item">Science</a>
@@ -29,6 +31,7 @@
             </div>            
         </li>
 
+        <!-- Non-Fiction Dropdown -->
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="non-fiction-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Non-Fiction
@@ -40,12 +43,15 @@
                 <a href="{% url 'products' %}?category=Non-fiction,Science,History,Biography" class="dropdown-item">All Non-Fiction</a>
             </div>
         </li>
-        
+
+        <!-- Contact Us Link -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'contact_us' %}">
                 Contact Us
             </a>
         </li>
+
+        <!-- Home Link -->
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}">
                 Home

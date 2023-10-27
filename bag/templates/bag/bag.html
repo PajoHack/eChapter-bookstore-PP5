@@ -86,7 +86,6 @@
                                         {% include "bag/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <!-- <p class="my-0">${{ item.subtotal }}</p> -->
                                         <p class="my-0">${{ item.book.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
