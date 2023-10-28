@@ -29,6 +29,8 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="book-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ book.title }}</p>
+                    <p class="small mb-0">Author: {{ book.author }}</p>  
+                    <p class="small mb-0">ISBN: {{ book.ISBN }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ book.price }}</p>
                     {% if book.category %}
                     <p class="small mt-1 mb-0">
