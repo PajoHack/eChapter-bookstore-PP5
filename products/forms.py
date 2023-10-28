@@ -3,9 +3,23 @@ from .widgets import CustomClearableFileInput
 from .models import Book
 
 
-# Defining a form for the Book model
 class BookForm(forms.ModelForm):
+    """
+    Form class for creating and updating Book instances in the online bookstore.
 
+    Inherits from:
+        - forms.ModelForm
+
+    Attributes in Meta Class:
+        - model: Specifies the model to use, which is 'Book'.
+        - fields: Specifies which fields to include in the form, using '__all__' to include all fields.
+
+    Fields:
+        - cover_image: Overridden to use a custom widget and label.
+
+    Methods:
+        - __init__: Initializes form fields and applies CSS classes.
+    """
     class Meta:
         model = Book
         fields = '__all__'

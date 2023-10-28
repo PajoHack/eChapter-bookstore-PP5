@@ -4,7 +4,15 @@ from django.db import models
 
 
 class Category(models.Model):
-
+    """
+    Category model for representing book categories in the online bookstore.
+    
+    Fields:
+        - name (CharField): The name of the category.
+        - friendly_name (CharField): A more human-friendly name of the category, can be null.
+        - description (TextField): A description of the category.
+    """
+    
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -20,6 +28,9 @@ class Category(models.Model):
 
 
 class Author(models.Model):
+    """
+    Author model for representing book authors in the online bookstore.
+    """
     name = models.CharField(max_length=255)
     bio = models.TextField()
 
@@ -28,6 +39,18 @@ class Author(models.Model):
 
 
 class Book(models.Model):
+    """
+    Book model for representing books in the online bookstore.
+
+    Fields:
+        - title (CharField): The title of the book.
+        - author (ForeignKey): A foreign key to the Author model, can be null.
+        - ISBN (CharField): The ISBN number of the book, can be null.
+        - publisher (CharField): The publisher of the book, can be null.
+        - price (DecimalField): The price of the book.
+        - category (ForeignKey): A foreign key to the Category model, can be null.
+        - cover_image (ImageField): The cover image of the book, can be null.
+    """
     title = models.CharField(max_length=255)
     author = models.ForeignKey(
         'Author', null=True, blank=True, on_delete=models.SET_NULL)

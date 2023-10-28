@@ -7,6 +7,33 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """
+    Order model for representing customer orders in the online bookstore.
+
+    Fields:
+        - order_number (CharField): A unique identifier for each order.
+        - user_profile (ForeignKey): A foreign key to the UserProfile model.
+        - full_name (CharField): The full name of the customer.
+        - email (EmailField): The email address of the customer.
+        - phone_number (CharField): The phone number of the customer.
+        - country (CountryField): The country for delivery.
+        - postcode (CharField): The postal code for delivery, can be null.
+        - town_or_city (CharField): The town or city for delivery.
+        - street_address1 (CharField): The first line of the street address for delivery.
+        - street_address2 (CharField): The second line of the street address for delivery, can be null.
+        - county (CharField): The county for delivery, can be null.
+        - date (DateTimeField): The date and time the order was placed.
+        - delivery_cost (DecimalField): The cost of delivery.
+        - order_total (DecimalField): The total cost of the order without delivery.
+        - grand_total (DecimalField): The total cost of the order including delivery.
+        - original_bag (TextField): Original cart, stored as a text field.
+        - stripe_pid (CharField): The Stripe payment identifier.
+
+    Methods:
+        - _generate_order_number: Generates a unique order number using UUID.
+        - update_total: Updates the grand total and delivery cost.
+        - save: Overrides the original save method to include the order number.
+    """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(
         UserProfile, on_delete=models.SET_NULL,
@@ -32,16 +59,9 @@ class Order(models.Model):
         max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
-        """
-        Generate a random, unique order number using UUID
-        """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
-        """
-        Update grand total each time a line item is added,
-        accounting for delivery costs.
-        """
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = (
                 self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
@@ -53,10 +73,6 @@ class Order(models.Model):
         self.save()
 
     def save(self, *args, **kwargs):
-        """
-        Override the original save method to set the order number
-        if it hasn't been set already.
-        """
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
@@ -66,6 +82,22 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """
+    OrderLineItem model represents individual line items in a customer order.
+
+    Fields:
+        - order (ForeignKey): A foreign key to the Order model.
+        - book (ForeignKey): A foreign key to the Book model.
+        - quantity (IntegerField): The quantity of the book ordered.
+        - lineitem_total (DecimalField): The total cost of this line item, calculated as 'quantity' * 'book price'.
+
+    Methods:
+        - save: Overrides the original save method to set the lineitem_total field and to update the order's total cost.
+        - __str__: String representation of the model instance.
+
+    Relationships:
+        - Related name 'lineitems' set for reverse relation from Order to OrderLineItem instances.
+    """
     order = models.ForeignKey(
         Order, null=False,
         blank=False,
@@ -84,10 +116,6 @@ class OrderLineItem(models.Model):
     )
 
     def save(self, *args, **kwargs):
-        """
-        Override the original save method to set the lineitem total
-        and update the order total.
-        """
         self.lineitem_total = self.book.price * self.quantity
         super().save(*args, **kwargs)
 

@@ -65,7 +65,7 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 - Search and Filters: Robust search functionality, along with various filter options, help users find books that fit their interests or needs.
 - Secure Transactions: Integration with Stripe ensures a secure and smooth checkout process.
 - Accessibility: The responsive design ensures that users can access the site from any device
-- Personalized Experience: User profiles and book recommendations cater to individual reading preferences, enhancing the shopping experience.
+- Personalized Experience: User profiles offer a tailored shopping experience by tracking order history, making it easier for users to find and purchase the books they love.
 
 
 ### Business Goals
@@ -81,7 +81,7 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 - Accessibility: Find and purchase books with ease from any device.
 - Affordability: Competitive pricing and special offers to make reading more affordable.
 - Diversity: Access to a broad range of titles across various genres and themes.
-- Personalization: Tailored recommendations and a user-friendly interface for a unique shopping experience.
+- Personalization: A user-friendly interface for a unique shopping experience.
 - Support: Efficient customer support to assist with inquiries and issues.
 
 [Back to the top](#)
@@ -100,7 +100,7 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 
 - Users must enter a valid email address.
 - Password must be at least 8 characters long.
-- A confirmation email is sent upon successful registration.
+- An email is sent to verify your account upon successful registration, ensuring the security and authenticity of each user.
 
 ### User Profile
 
@@ -112,7 +112,7 @@ Addressing User Needs, eChapter aims to meet the varying needs of its target aud
 #### Add New Book
 
 - Admins can add a new book to the store.
-- All book details such as title, author, price, and ISBN must be provided.
+- All book required details must be provided.
 - Book cover image should be uploadable.
 
 #### Edit Existing Book
@@ -169,7 +169,7 @@ The background colors for eChapter have been carefully selected to provide a neu
 
 ### Text Colors
 
-Text colors are primarily dark shades like black or dark gray. The aim is to maximize readability and reduce eye strain, especially during prolonged use. We've also employed color hierarchy; headlines or important text elements might be in bold and a darker shade, while secondary text could be a lighter shade of gray.
+Text colors are primarily dark shades like black or dark gray. The aim is to maximize readability and reduce eye strain, especially during prolonged use.
 
 The color scheme is a crucial part of the overall design and user experience of eChapter. It serves functional purposes, like readability and accessibility, while also contributing to the brand's emotional resonance with users. Careful selection and testing have gone into these choices to create an interface that is not just visually pleasing but also user-friendly.
 
@@ -214,7 +214,7 @@ The color scheme is a crucial part of the overall design and user experience of 
 
 ### Epic
 
-The overarching epic of the eChapter project is to revolutionize the way people discover, purchase, and engage with books in a digital landscape. In an era where physical bookstores are dwindling and the power of choice is at our fingertips, eChapter aspires to be the trusted online portal for literature enthusiasts, students, and professionals alike. Through features like a diverse catalog, personalized recommendations, and seamless payment options, the project aims to offer more than just a transactional experience; it seeks to build a community of avid readers. By merging the cozy ambiance of a traditional bookstore with the convenience and efficiency of online shopping, eChapter sets out to preserve the essence of reading while adapting to the demands of the modern world. Every design decision, feature implementation, and user interaction is guided by this epic, ensuring that the platform is not just a marketplace but a sanctuary for those who find solace in the written word.
+The overarching epic of the eChapter project is to improve the way people discover, purchase, and engage with books in a digital landscape. In an era where physical bookstores are dwindling and the power of choice is at our fingertips, eChapter aspires to be the trusted online portal for literature enthusiasts, students, and professionals alike. Through features like a diverse catalog and seamless payment options, the project aims to offer more than just a transactional experience; it seeks to build a community of avid readers. By merging the cozy ambiance of a traditional bookstore with the convenience and efficiency of online shopping, eChapter sets out to preserve the essence of reading while adapting to the demands of the modern world. Every design decision, feature implementation, and user interaction is guided by this epic, ensuring that the platform is not just a marketplace but a sanctuary for those who find solace in the written word.
 
 ### User Stories
 
@@ -278,7 +278,7 @@ The overarching epic of the eChapter project is to revolutionize the way people 
 
 Top Navigation Bar: On desktop, the top navigation bar provides quick access to essential user features. It includes a search bar for finding books, 'My Account' options for registered users, and the shopping bag with the total purchase amount.
 
-Main Navigation: Below the top navigation bar, a second navigation bar provides links to different categories of books (e.g., Fiction, Non-Fiction, Best Sellers, etc.) and other essential pages like 'Contact'.
+Main Navigation: Below the top navigation bar, a second navigation bar provides links to different categories of books (e.g., Fiction, Non-Fiction etc.) and other essential pages like 'Contact'.
 
 - Mobile Navigation
 
@@ -294,11 +294,11 @@ User and Bag Icons: The 'My Account' and 'Shopping Bag' features are represented
 
 The footer of eChapter serves as a multi-functional area that provides additional information and functionalities for both casual browsers and registered users.
 
-- Social Links: On the left side of the footer, you'll find social media links that encourage users to stay connected with eChapter on platforms like Facebook. A brief message entices users to keep up to date with the latest offerings.
+- Social Links: On the left side of the footer, you'll find social media links that encourage users to stay connected with eChapter on Facebook. A brief message entices users to keep up to date with the latest offerings.
 - Newsletter Signup: On the right side, there's a "Subscribe" section where users can sign up for the eChapter newsletter. This feature uses Mailchimp integration and comes with an email input and a 'Subscribe' button.
 - Privacy Policy: A link to the privacy policy is also included, ensuring transparency about how user data is handled.
 - Design: The footer is designed with a dark background to separate it from the main content visually, making it distinct and easy to locate.
-- Responsiveness: The layout of the footer is fully responsive, ensuring a consistent look and feel on both desktop and mobile devices.
+- Responsiveness: The layout of the footer is responsive, ensuring a consistent look and feel on both desktop and mobile devices.
 
 This footer provides a final touch to the website, adding both functionality and informational resources for users.
 
@@ -403,7 +403,7 @@ eChapter utilizes Bootstrap's Toast notifications for a better user experience. 
 
 - 500 Error Page
 
-During development, we've taken steps to handle errors as gracefully as possible. However, in the rare case that a 500 Internal Server Error occurs, a dedicated error page will be displayed to the user. We are continuously working to minimize these occurrences and improve the stability of the platform.
+During development, I've taken steps to handle errors as gracefully as possible. However, in the rare case that a 500 Internal Server Error occurs, a dedicated error page will be displayed to the user.
 
 ![Screenshot of the custom 500 error page](documentation/500-error-screenshot.png)
 
@@ -448,16 +448,17 @@ The 'Contact Us' section serves as a crucial touchpoint between the website and 
 
 ## GitHub Project Boards
 
-I used GitHub Project Boards to manage the tasks and sprints for the development of eChapter. Each sprint was represented as a separate column, and tasks were added as cards within these columns. We moved the cards through statuses like 'To Do', 'In Progress', and 'Done' to reflect their current state.
+I used GitHub Project Boards to manage the tasks and sprints for the development of eChapter. Each sprint was represented as a separate column, and tasks were added as cards within these columns. I moved the cards through statuses like 'To Do', 'In Progress', and 'Done' to reflect their current state.
 
 Example: [GitHub Project Board](https://github.com/users/PajoHack/projects/9)
 
-GitHub Issues
+## GitHub Issues
+
 Issues were used to break down tasks into manageable units of work. Each issue was tagged with appropriate labels for easy categorization and was linked to the corresponding milestone and project board.
 
 Example: [USER STORY: Add a book #21](https://github.com/PajoHack/eChapter-bookstore-PP5/issues/21)
 
-GitHub Milestones
+## GitHub Milestones
 Milestones were used to mark significant phases in the project. Each milestone included a group of related issues that were to be completed for that phase to be considered complete.
 
 Example: [Integrate Stripe](https://github.com/PajoHack/eChapter-bookstore-PP5/milestone/7)

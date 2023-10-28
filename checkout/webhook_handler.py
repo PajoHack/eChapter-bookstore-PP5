@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from .models import Order, OrderLineItem
-from products.models import Book  # Changed this line
+from products.models import Book
 from profiles.models import UserProfile
 import json
 import time

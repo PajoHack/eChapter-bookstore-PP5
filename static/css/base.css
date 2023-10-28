@@ -39,7 +39,7 @@ body.d-flex.flex-column {
 .align-vertical {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers the content vertically */
+    justify-content: center;
 }
 
 /* To remove the border from the icon */
@@ -58,6 +58,7 @@ body.d-flex.flex-column {
     box-shadow: none;
 }
 
+/* Homr banner styles */
 .home-banner {
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -395,9 +396,7 @@ input#mc-embedded-subscribe.button {
 }
 
 /* End of Footer Styles */
-/* * {
-    outline: 2px solid #28a745 !important;
-} */
+
 /* Media Queries */
 @media (max-width: 992px) {
     .header-container {
