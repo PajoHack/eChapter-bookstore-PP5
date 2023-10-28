@@ -1,9 +1,10 @@
-from django.db import models
 import uuid
+from django.db import models
 from django.conf import settings
 from django_countries.fields import CountryField
 from products.models import Book
 from profiles.models import UserProfile
+from django.db.models import Sum
 
 
 class Order(models.Model):
@@ -62,6 +63,7 @@ class Order(models.Model):
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = (
                 self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
