@@ -433,6 +433,7 @@ The 'Contact Us' section serves as a crucial touchpoint between the website and 
 - Gift Cards and Coupons: Implement a system where users can purchase and redeem gift cards or coupons, providing more flexible payment options.
 - Digital Downloads: Offer books in digital formats such as ePub or PDF, in addition to physical copies.
 - Social Media Integration: Allow users to share their purchases or favorite books on social media platforms directly from the site.
+- To prevent accidental deletions, a warning prompt will be added in the Product Management section that will require admin confirmation before a book is permanently deleted from the database.
 
 [Back to the top](#)
 
